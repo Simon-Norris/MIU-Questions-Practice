@@ -14,7 +14,7 @@ public class Main
         // Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
 
         String s1 ="ab" , s2 = "eidbaooo";
-        System.out.println(PermuationInString.checkInclusion(s1, s2));
+        System.out.println(PermuationInString.checkInclusionOne(s1, s2));
     }
 }
 
