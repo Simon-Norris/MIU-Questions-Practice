@@ -75,12 +75,32 @@ public class Main
         }*/
 
         // find unions of an array
-        int[] first ={1,2,2,2,3,3,3,3,3,3,4,4,5,6,6,7,7,8};
-        int[] second ={3,3,3,3,4,4,5,6,6,7,7,8,9,9,9,9,9,9,10,12,24,25,25};
-        ArrayProblems.doUnion(first, first.length, second, second.length);
+//        int[] first ={1,2,2,2,3,3,3,3,3,3,4,4,5,6,6,7,7,8};
+//        int[] second ={3,3,3,3,4,4,5,6,6,7,7,8,9,9,9,9,9,9,10,12,24,25,25};
+//        ArrayProblems.doUnion(first, first.length, second, second.length);
+//
+//        // Finding maximum element in an array
+//        System.out.print("Maximum element in an array is " + Recursion.findMaxElement(arr, arr.length, arr[0]));
 
-        // Finding maximum element in an array
-        System.out.print("Maximum element in an array is " + Recursion.findMaxElement(arr, arr.length, arr[0]));
+        // binary search using recursion
+        System.out.print("Before Sorting\n");
+        for (int i=0; i< arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        for (int i=1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i-1;
+            while(j >= 0 && arr[j] > key) {
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = key;
+        }
+        System.out.print("\nAfter Sorting\n");
+        for (int i=0; i< arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.print("\nThe element lies at index: "+Recursion.binarySearch(arr, 0, (arr.length-1), 76));
     }
 }
 

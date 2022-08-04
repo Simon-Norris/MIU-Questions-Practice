@@ -100,4 +100,14 @@ public class Recursion {
         }
         return findMaxElement(arr, length-1, max);
     }
+    public static int binarySearch(int[] arr, int start, int end, int valueToFind) {
+        if (start <= end) {
+            int mid = start + (end-start)/2;
+            if (arr[mid] == valueToFind) return mid;
+            else if (arr[mid] > valueToFind) return binarySearch(arr, start, mid-1, valueToFind);
+            else if (arr[mid] < valueToFind) return binarySearch(arr, mid+1, end, valueToFind);
+        }
+        return -1;
+    }
+
 }
