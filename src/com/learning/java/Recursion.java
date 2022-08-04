@@ -90,4 +90,14 @@ public class Recursion {
         System.out.println(nice);
         return nice;
     }
+    public static int findMaxElement(int[] arr, int length, int max) {
+        if (length == 1) {
+            return max;
+        }
+        int num = arr[length-1];
+        if (num > max) {
+            max = num;
+        }
+        return findMaxElement(arr, length-1, max);
+    }
 }

@@ -73,9 +73,14 @@ public class Main
         for (int i=0; i < result.length; i++){
             System.out.println(result[i]);
         }*/
+
+        // find unions of an array
         int[] first ={1,2,2,2,3,3,3,3,3,3,4,4,5,6,6,7,7,8};
         int[] second ={3,3,3,3,4,4,5,6,6,7,7,8,9,9,9,9,9,9,10,12,24,25,25};
         ArrayProblems.doUnion(first, first.length, second, second.length);
+
+        // Finding maximum element in an array
+        System.out.print("Maximum element in an array is " + Recursion.findMaxElement(arr, arr.length, arr[0]));
     }
 }
 
