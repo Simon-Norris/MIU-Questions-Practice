@@ -11,7 +11,12 @@ public class Main
         //  Sorting.insertionSort(arr);
 
         // descending order insertion sort
-        Sorting.insertionSortDescending(arr);
+//        Sorting.insertionSortDescending(arr);
+//        for (int i=0; i< arr.length; i++) {
+//            System.out.print(arr[i]+" ");
+//        }
+        // Sorting using quick sort algorithm
+        Sorting.quickSort(arr,0, arr.length-1);
         for (int i=0; i< arr.length; i++) {
             System.out.print(arr[i]+" ");
         }
