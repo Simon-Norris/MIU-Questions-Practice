@@ -82,7 +82,6 @@ public class Recursion {
     }
     public static int rev(int num, int result){
         if (num == 0) {
-            System.out.println("which went");
             return result;
         }
         result = (result*10) + num%10;
@@ -108,6 +107,9 @@ public class Recursion {
             else if (arr[mid] < valueToFind) return binarySearch(arr, mid+1, end, valueToFind);
         }
         return -1;
+    }
+    public static int productOfTwoNumbers(int a, int b) {
+        return a;
     }
 
 }
