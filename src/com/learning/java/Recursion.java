@@ -127,4 +127,18 @@ public class Recursion {
         }
         return 1 + sumOfTwoNumbers(min-1, max);
     }
+
+    public static void reverseArray(int[] arr, int left, int right) {
+        if (left >= right) return;
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+        reverseArray(arr, left+1, right-1);
+    }
+    public static int fibonacciSequence(int num) {
+        if (num == 0 || num==1) {
+            return num;
+        }
+        return fibonacciSequence(num-2) + fibonacciSequence(num-1);
+    }
 }

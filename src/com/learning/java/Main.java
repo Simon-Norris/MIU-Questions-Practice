@@ -102,10 +102,22 @@ public class Main
 //        System.out.print("\nThe element lies at index: "+Recursion.binarySearch(arr, 0, (arr.length-1), 76));
 
         // product of two numbers using recursion
-        System.out.print("The product is: "+Recursion.productOfTwoNumbers(12,7));
+        //System.out.print("The product is: "+Recursion.productOfTwoNumbers(12,7));
 
         // Sum of two numbers using recursion
-        System.out.print("The product is: "+Recursion.sumOfTwoNumbers(-10,240));
+        //System.out.print("The product is: "+Recursion.sumOfTwoNumbers(-10,240));
+
+        //Reverse an array
+        Recursion.reverseArray(arr, 0, arr.length-1);
+        for (int i=0; i< arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        // Print Fibonacci Sequence
+        int n = 10;
+        for (int i=0; i< n; i++) {
+            System.out.print(Recursion.fibonacciSequence(i)+ " ");
+        }
     }
 }
 
