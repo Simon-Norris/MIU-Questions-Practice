@@ -3,7 +3,6 @@ package com.learning.java;
 import java.util.*;
 public class Main
 {
-
     public static void main(String[] args) {
 
         // reverse the integer number
@@ -83,24 +82,30 @@ public class Main
 //        System.out.print("Maximum element in an array is " + Recursion.findMaxElement(arr, arr.length, arr[0]));
 
         // binary search using recursion
-        System.out.print("Before Sorting\n");
-        for (int i=0; i< arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        for (int i=1; i < arr.length; i++) {
-            int key = arr[i];
-            int j = i-1;
-            while(j >= 0 && arr[j] > key) {
-                arr[j+1] = arr[j];
-                j--;
-            }
-            arr[j+1] = key;
-        }
-        System.out.print("\nAfter Sorting\n");
-        for (int i=0; i< arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.print("\nThe element lies at index: "+Recursion.binarySearch(arr, 0, (arr.length-1), 76));
+//        System.out.print("Before Sorting\n");
+//        for (int i=0; i< arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        for (int i=1; i < arr.length; i++) {
+//            int key = arr[i];
+//            int j = i-1;
+//            while(j >= 0 && arr[j] > key) {
+//                arr[j+1] = arr[j];
+//                j--;
+//            }
+//            arr[j+1] = key;
+//        }
+//        System.out.print("\nAfter Sorting\n");
+//        for (int i=0; i< arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+//        System.out.print("\nThe element lies at index: "+Recursion.binarySearch(arr, 0, (arr.length-1), 76));
+
+        // product of two numbers using recursion
+        System.out.print("The product is: "+Recursion.productOfTwoNumbers(12,7));
+
+        // Sum of two numbers using recursion
+        System.out.print("The product is: "+Recursion.sumOfTwoNumbers(-10,240));
     }
 }
 

@@ -109,7 +109,22 @@ public class Recursion {
         return -1;
     }
     public static int productOfTwoNumbers(int a, int b) {
-        return a;
+        int min = Math.min(a, b);
+        int max = Math.max(a, b);
+        if ( min == 0) {
+            return 0;
+        }
+        return max + productOfTwoNumbers(min-1, max);
     }
 
+    public static int sumOfTwoNumbers (int a, int b) {
+        int min = Math.min(a, b);
+        int max = Math.max(a, b);
+        if ( min == 0) {
+            return max;
+        } else if (min < 0) {
+            return max+min;
+        }
+        return 1 + sumOfTwoNumbers(min-1, max);
+    }
 }
