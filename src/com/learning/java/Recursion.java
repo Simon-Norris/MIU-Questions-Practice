@@ -141,4 +141,26 @@ public class Recursion {
         }
         return fibonacciSequence(num-2) + fibonacciSequence(num-1);
     }
+    public static  void findPermutation(String str) {
+        if (str.length() == 0)  {
+            return;
+        }
+        permute(str.toCharArray(), 0);
+    }
+    private static void permute(char[] chars, int currentIndex) {
+        if (currentIndex == chars.length-1) {
+            String idk = String.valueOf(chars);
+            System.out.println(idk);
+        }
+        for (int i=currentIndex; i< chars.length; i++) {
+            swap(chars, currentIndex, i); // do swap
+            permute(chars, currentIndex+1);
+            swap(chars, currentIndex, i); // undo swap
+        }
+    }
+    private static void swap(char[] chars, int first, int second) {
+        char temp = chars[first];
+        chars[first] = chars[second];
+        chars[second] = temp;
+    }
 }
