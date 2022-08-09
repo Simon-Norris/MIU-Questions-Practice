@@ -75,4 +75,21 @@ public class Solution {
        }
        return slowPointer+1;
    }
+   /**
+    * Write a function named largestAdjacentSum that iterates through an array computing the sum of adjacent elements and returning
+    * the largest such sum. You may assume that the array has at least 2 elements.
+    * If you are writing in Java or C#, the function signature is
+    * int largestAdjacentSum(int[ ] a)
+    * If you are writing in C or C++, the function signature is
+    * int largestAdjacentSum(int a[ ], int len) where len is the number of elements in a.
+    * **/
+   public static int largestAdjacentSum(int[] a) {
+       int max = Integer.MIN_VALUE;
+       for (int i=0; i+1<a.length; i++) {
+           if (a[i]+a[i+1] > max) {
+               max = a[i] + a[i+1];
+           }
+       }
+       return max;
+   }
 }
