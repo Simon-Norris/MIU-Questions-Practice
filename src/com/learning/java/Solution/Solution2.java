@@ -1,6 +1,6 @@
-package com.learning.java;
+package com.learning.java.Solution;
 
-public class Solution {
+public class Solution2 {
     /**
      * . The number 198 has the property that 198 = 11 + 99 + 88, i.e., if each of its digits is concatenated twice and then summed, the result
      * will be the original number. It turns out that 198 is the only number with this property. However, the property can be generalized so
@@ -12,18 +12,18 @@ public class Solution {
      * The function returns 1 if n is equal to the sum of each of its digits contenated catlen times. Otherwise, it returns 0. You may assume
      * that n and catlen are greater than zero
      * Hint: Use integer and modulo 10 arithmetic to sequence through the digits of the argument.
-     * **/
-    public static int checkConcatenatedSum(int n , int catLength) {
+     **/
+    public static int checkConcatenatedSum(int n, int catLength) {
         int copyN = n;
         int total = 0;
         while (n > 0) {
-            int r = n%10;
+            int r = n % 10;
             int multiple10 = 1;
-            for (int i=0; i<catLength; i++) {
-                total += r*multiple10;
+            for (int i = 0; i < catLength; i++) {
+                total += r * multiple10;
                 multiple10 *= 10;
             }
-            n = n/10;
+            n = n / 10;
         }
         if (total != copyN) {
             return 0;
@@ -42,54 +42,57 @@ public class Solution {
      * If you are writing in C or C++ the function signature is
      * int isSequencedArray(int a[ ], int len, int m, int n) where len is the number of elements in the array a.
      * You may assume that m<=n.
-     * **/
-   public static int isSequencedArray(int[] a, int m, int n) {
+     **/
+    public static int isSequencedArray(int[] a, int m, int n) {
         int start = a[0];
-        int end = a[a.length-1];
-        if ( start != m  || end != n) return 0;
-        for (int i=0; i+1 < a.length; i++) {
-            if (a[i] > a[i+1]) return 0;
+        int end = a[a.length - 1];
+        if (start != m || end != n) return 0;
+        for (int i = 0; i + 1 < a.length; i++) {
+            if (a[i] > a[i + 1]) return 0;
         }
         int arrLength = removeDuplicates(a);
-        for (int i=0; i<arrLength; i++){
+        for (int i = 0; i < arrLength; i++) {
             if (m != a[i]) {
                 return 0;
             }
             m++;
         }
         return 1;
-   }
-   /**
-    * Removes all the duplicate elements in an array.
-    * Returns the length of array upto which the elements are unique.
-    * Array should be sorted before invoking this function.
-    * **/
-   private static int removeDuplicates(int[] arr) {
-       int slowPointer =0 , fastPointer = 1;
-       while (fastPointer < arr.length) {
-           if (arr[slowPointer] != arr[fastPointer]) {
-               arr[slowPointer+1] = arr[fastPointer];
-               slowPointer++;
-           }
-           fastPointer++;
-       }
-       return slowPointer+1;
-   }
-   /**
-    * Write a function named largestAdjacentSum that iterates through an array computing the sum of adjacent elements and returning
-    * the largest such sum. You may assume that the array has at least 2 elements.
-    * If you are writing in Java or C#, the function signature is
-    * int largestAdjacentSum(int[ ] a)
-    * If you are writing in C or C++, the function signature is
-    * int largestAdjacentSum(int a[ ], int len) where len is the number of elements in a.
-    * **/
-   public static int largestAdjacentSum(int[] a) {
-       int max = Integer.MIN_VALUE;
-       for (int i=0; i+1<a.length; i++) {
-           if (a[i]+a[i+1] > max) {
-               max = a[i] + a[i+1];
-           }
-       }
-       return max;
-   }
+    }
+
+    /**
+     * Removes all the duplicate elements in an array.
+     * Returns the length of array upto which the elements are unique.
+     * Array should be sorted before invoking this function.
+     **/
+    private static int removeDuplicates(int[] arr) {
+        int slowPointer = 0, fastPointer = 1;
+        while (fastPointer < arr.length) {
+            if (arr[slowPointer] != arr[fastPointer]) {
+                arr[slowPointer + 1] = arr[fastPointer];
+                slowPointer++;
+            }
+            fastPointer++;
+        }
+        return slowPointer + 1;
+    }
+
+    /**
+     * Write a function named largestAdjacentSum that iterates through an array computing the sum of adjacent elements and returning
+     * the largest such sum. You may assume that the array has at least 2 elements.
+     * If you are writing in Java or C#, the function signature is
+     * int largestAdjacentSum(int[ ] a)
+     * If you are writing in C or C++, the function signature is
+     * int largestAdjacentSum(int a[ ], int len) where len is the number of elements in a.
+     **/
+    public static int largestAdjacentSum(int[] a) {
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i + 1 < a.length; i++) {
+            if (a[i] + a[i + 1] > max) {
+                max = a[i] + a[i + 1];
+            }
+        }
+        return max;
+    }
+
 }
