@@ -33,4 +33,34 @@ public class TwoPointers {
         }
         return result;
     }
+    /**
+     * Given n non-negative integers representing an elevation map where the width of each bar is 1,
+     * compute how much water it can trap after raining.
+     * Input: height = [4,2,0,3,2,5]
+     * Output: 9
+     * Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+     * Output: 6
+     * **/
+    public static int trapRainWater(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        int left=0, right=arr.length-1, leftMax=0, rightMax=0, trappedWater=0;
+        while (left < right) {
+            if (arr[left] < arr[right]) {
+                if (arr[left] >= leftMax) {
+                    leftMax = arr[left];
+                } else {
+                    trappedWater += leftMax-arr[left];
+                }
+                left++;
+            } else {
+                if (arr[right] >= rightMax) {
+                    rightMax = arr[right];
+                } else {
+                    trappedWater += rightMax-arr[right];
+                }
+               right-- ;
+            }
+        }
+        return trappedWater;
+    }
 }
