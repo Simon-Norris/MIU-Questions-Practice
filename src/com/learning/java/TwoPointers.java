@@ -1,6 +1,38 @@
 package com.learning.java;
 
+import java.util.Arrays;
+
 public class TwoPointers {
+    /**
+     *Given a sorted array and a number x, find a pair in an array whose sum is closest to x.
+     * Examples:
+     * Input: arr[] = {10, 22, 28, 29, 30, 40}, x = 54
+     * Output: 22 and 30
+     * Input: arr[] = {1, 3, 4, 7, 10}, x = 15
+     * Output: 4 and 10
+     **/
+    public static int[] closestSum(int[] arr, int target) {
+        if (arr == null || arr.length == 0) return arr;
+        Arrays.sort(arr);
+        int left = 0, right = arr.length-1, closest=0;
+        int[] response = new int[2];
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+            if (sum > target) {
+                right--;
+            } else {
+               if (sum >= closest) {
+                   closest = sum;
+                   response[0] = arr[left];
+                   response[1] = arr[right];
+                   left++;
+               } else {
+                   right--;
+               }
+            }
+        }
+        return response;
+    }
     /** Find the closest pair from two sorted Arrays
      * Given two sorted arrays and number X. Find the pair whose sum is closest to X
      * and the pair has an element from each array.
