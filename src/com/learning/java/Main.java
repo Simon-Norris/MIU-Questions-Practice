@@ -16,9 +16,13 @@ public class Main
 //
 //        System.out.println("Trapped Rain Water is: "+TwoPointers.trapRainWater(arr));
 
-        int[] arr = {10, 22, 28, 29, 30, 40};
-        int[] res = TwoPointers.closestSum(arr,31);
-        System.out.printf("The pair equal to target are: %s and %s.",res[0],res[1]);
+//        int[] arr = {10, 22, 28, 29, 30, 40};
+//        int[] res = TwoPointers.closestSum(arr,31);
+//        System.out.printf("The pair equal to target are: %s and %s.",res[0],res[1]);
+
+        int[] arr = {-1,0,1,2,-1,-4};
+        List<List<Integer>> list = TwoPointers.tripletZeroSum(arr);
+        System.out.println(list);
     }
 }
 

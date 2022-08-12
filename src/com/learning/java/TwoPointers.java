@@ -1,6 +1,8 @@
 package com.learning.java;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class TwoPointers {
     /**
@@ -65,6 +67,29 @@ public class TwoPointers {
         }
         return result;
     }
+
+    public static List<List<Integer>> tripletZeroSum (int[] arr){
+        Arrays.sort(arr);
+        List<List<Integer>> mainList = new ArrayList<>();
+        for (int l = 0; l < arr.length; l++) {
+            int m = l+1 ,r = arr.length-1;
+            while (m < r) {
+                int tripleSum = arr[l] + arr[m] + arr[r];
+                if (tripleSum < 0) {
+                   m++;
+                } else if (tripleSum > 0) {
+                    r--;
+                } else {
+                    mainList.add(Arrays.asList(arr[l], arr[m], arr[r]));
+                    while (m+1 <= r && arr[m] == arr[m+1]) m++; // skip duplicate element on mid
+                    m++; r--;
+                }
+            }
+            while (l+1 < arr.length && arr[l+1] == arr[l]) l++; // skip duplicate element on leftmost
+        }
+        return mainList;
+    }
+
     /**
      * Given n non-negative integers representing an elevation map where the width of each bar is 1,
      * compute how much water it can trap after raining.
