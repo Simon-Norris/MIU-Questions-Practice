@@ -66,4 +66,19 @@ public class Solution3 {
         }
         return true;
     }
+
+    public static int largestAdjacentSum(int[] arr) {
+        if (arr.length < 2) return -1;
+        int k = 2;
+        int currentSum =0, windowStart=0, maximum=Integer.MIN_VALUE;
+        for (int windowEnd=0; windowEnd < arr.length; windowEnd++) {
+            currentSum += arr[windowEnd];
+            if (windowEnd >= (k-1)){
+                maximum = Math.max(maximum, currentSum);
+                currentSum -= arr[windowStart];
+                windowStart++;
+            }
+        }
+        return maximum;
+    }
 }

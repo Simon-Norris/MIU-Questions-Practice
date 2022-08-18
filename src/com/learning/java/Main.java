@@ -21,13 +21,16 @@ public class Main
 //            System.out.print("Number is not Consecutive Factored!");
 //        }
 
-        int num = 3;
-        int re = Solution3.isTwinPrime(num);
-        if (re == 1){
-            System.out.print("Number is twin primed.");
-        } else {
-            System.out.print("Number is not twine primed!");
-        }
+//        int num = 3;
+//        int re = Solution3.isTwinPrime(num);
+//        if (re == 1){
+//            System.out.print("Number is twin primed.");
+//        } else {
+//            System.out.print("Number is not twine primed!");
+//        }
+
+        int[] arr = {1, 2, 3, 4}  ;
+        System.out.println("The largest adjacent sum is: "+ Solution3.largestAdjacentSum(arr));
 
     }
 }
