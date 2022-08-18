@@ -13,12 +13,20 @@ public class Main
 //            System.out.print("Array is not hollow!");
 //        }
 
-        int num = 90;
-        int re = Solution3.isConsecutiveFactored(num);
+//        int num = 90;
+//        int re = Solution3.isConsecutiveFactored(num);
+//        if (re == 1){
+//            System.out.print("Number is Consecutive Factored.");
+//        } else {
+//            System.out.print("Number is not Consecutive Factored!");
+//        }
+
+        int num = 3;
+        int re = Solution3.isTwinPrime(num);
         if (re == 1){
-            System.out.print("Array is Consecutive Factored.");
+            System.out.print("Number is twin primed.");
         } else {
-            System.out.print("Array is not Consecutive Factored!");
+            System.out.print("Number is not twine primed!");
         }
 
     }

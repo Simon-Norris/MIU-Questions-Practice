@@ -50,4 +50,20 @@ public class Solution3 {
         }
         return 0;
     }
+
+    public static int isTwinPrime(int n) {
+        if (n <=1) return 0;
+        if (isPrime(n+2) || isPrime(n-2)) return 1;
+        return 0;
+    }
+
+    private static boolean isPrime(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= num/2 ; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
