@@ -32,13 +32,15 @@ public class Main
 //        int[] arr = {1, 2, 3, 4}  ;
 //        System.out.println("The largest adjacent sum is: "+ Solution3.largestAdjacentSum(arr));
 
-        int[] arr = {} ;
-        int re = Solution3.isZeroBalanced(arr);
-        if (re == 1){
-            System.out.print("Number is Zero Balanced.");
-        } else {
-            System.out.print("Number is not Zero Balanced!");
-        }
+//        int[] arr = {} ;
+//        int re = Solution3.isZeroBalanced(arr);
+//        if (re == 1){
+//            System.out.print("Number is Zero Balanced.");
+//        } else {
+//            System.out.print("Number is not Zero Balanced!");
+//        }
+
+        System.out.println("Smallest BEQ number is "+Solution3.findSmallestBEQNumber());
 
     }
 }

@@ -119,4 +119,18 @@ public class Solution3 {
         if (isCounterPart) return 1;
         return 0;
     }
+
+    public static int findSmallestBEQNumber(){
+        for (int i = 1; ; i++) {
+            int cubeOfNumber = Math.abs(i * i *i);
+            if (cubeOfNumber == 0) return 0;
+            int countSixes = 0;
+            while (cubeOfNumber != 0) {
+                int r = cubeOfNumber % 10;
+                if (r == 6) countSixes++;
+                cubeOfNumber = cubeOfNumber/10;
+            }
+            if (countSixes == 4) return i;
+        }
+    }
 }
