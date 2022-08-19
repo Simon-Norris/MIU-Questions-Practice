@@ -81,4 +81,42 @@ public class Solution3 {
         }
         return maximum;
     }
+
+    public static int isZeroBalanced(int[] arr) {
+        if (arr == null || arr.length == 0 ) return 0;
+        int zeroCount = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                zeroCount++;
+            }
+        }
+        if (zeroCount == arr.length) return 1;
+        if (arr.length % 2 != 0) return 0;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        if (sum != 0) return 0;
+        int[] neg = new int[arr.length / 2];
+        int k=0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                neg[k] = arr[i];
+                k++;
+            }
+        }
+        boolean isCounterPart = false;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                for (int j = 0; j< neg.length; j++) {
+                    if (arr[i] == Math.abs(neg[j])){
+                        isCounterPart = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (isCounterPart) return 1;
+        return 0;
+    }
 }
