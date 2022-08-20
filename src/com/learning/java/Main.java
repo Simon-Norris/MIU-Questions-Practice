@@ -17,12 +17,20 @@ public class Main
 //            System.out.println("Array is not Balanced");
 //        }
 
-        int[] arr =   {9} ;
-        int response = Solution4.isCentered(arr);
-        if (response == 1) {
-            System.out.println("Array is Centered");
+//        int[] arr =   {9} ;
+//        int response = Solution4.isCentered(arr);
+//        if (response == 1) {
+//            System.out.println("Array is Centered");
+//        } else {
+//            System.out.println("Array is not Centered");
+//        }
+
+        int m=4,n=6;
+        boolean response = Solution4.hasKSmallFactors(m,n);
+        if (response) {
+            System.out.println("Has K Small Factors");
         } else {
-            System.out.println("Array is not Centered");
+            System.out.println("Doesn't have k small factors");
         }
     }
 }

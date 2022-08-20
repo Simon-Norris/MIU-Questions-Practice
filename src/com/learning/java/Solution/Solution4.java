@@ -62,4 +62,20 @@ public class Solution4 {
         }
         return 1;
     }
+
+    public static boolean hasKSmallFactors(int k, int n){
+        if (k < 0 || n < 0) return false;
+        boolean hasKSmallFactors = false;
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= n; j++) {
+                if (i*j == n) {
+                    if (i < k && j <k) {
+                        hasKSmallFactors = true;
+                        break;
+                    }
+                }
+            }
+        }
+        return hasKSmallFactors;
+    }
 }
