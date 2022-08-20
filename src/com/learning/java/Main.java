@@ -71,8 +71,16 @@ public class Main
 //        int num = 16;
 //        System.out.println("Is this normal number? "+Solution3.isNormal(num));
 
-        int[] arr = {3, 2, 1, 0, 4};
-        System.out.println("Is an array of all possibilities? "+Solution3.isAllPossibilities(arr));
+//        int[] arr = {3, 2, 1, 0, 4};
+//        System.out.println("Is an array of all possibilities? "+Solution3.isAllPossibilities(arr));
+
+        int[] arr = {1, 3, 6, 11,9};
+        int re = Solution3.isFilter(arr);
+        if (re == 1){
+            System.out.print("Array is Filter array");
+        } else {
+            System.out.print("Array is not Filter array");
+        }
     }
 }
 

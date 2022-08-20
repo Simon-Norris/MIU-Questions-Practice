@@ -247,4 +247,34 @@ public class Solution3 {
         }
         return 1;
     }
+
+    public static int isFilter(int[] a) {
+        if (a == null || a.length == 0) return 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 9) {
+                boolean elevenFound = false;
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] == 11) {
+                        elevenFound = true;
+                        break;
+                    }
+                }
+                if (elevenFound) return 1;
+                return 0;
+            }
+            if (a[i] == 7) {
+                boolean thirteenFound = false;
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] == 13) {
+                        thirteenFound = true;
+                        break;
+                    }
+                }
+                if (thirteenFound) return 0;
+                return 1;
+            }
+        }
+        return 1;
+    }
+
 }
