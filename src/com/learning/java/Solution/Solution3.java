@@ -289,4 +289,26 @@ public class Solution3 {
 
     }
 
+    public static int isFineArray(int[] a) {
+        if (a == null || a.length == 0) return 0;
+        boolean primeNotFound = true;
+        for (int i = 0; i < a.length; i++) {
+            int num = a[i];
+            boolean isNumPrime = isPrime(num);
+            if (isNumPrime) {
+                primeNotFound = false;
+                for (int j = 0; j < a.length; j++) {
+                    int anotherNum = a[j];
+                    boolean isAnotherNumPrime = isPrime(anotherNum);
+                    if (isAnotherNumPrime) {
+                        int diff = num - anotherNum;
+                        if (diff == 2 || diff == -2) return 1;
+                    }
+                }
+                return 0;
+            }
+        }
+        if (primeNotFound) return 1;
+        return 0;
+    }
 }
