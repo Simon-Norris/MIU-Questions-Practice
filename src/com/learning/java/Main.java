@@ -42,13 +42,15 @@ public class Main
 
 //        System.out.println("Smallest BEQ number is "+Solution3.findSmallestBEQNumber());
 
-        int[] arr = {-27,24}    ;
-        int re = Solution3.isCubePerfect(arr);
-        if (re == 1){
-            System.out.print("Array is Cube Perfect");
-        } else {
-            System.out.print("Array is not Cube Perfect");
-        }
+//        int[] arr = {}  ;
+//        int re = Solution3.isCubePerfect(arr);
+//        if (re == 1){
+//            System.out.print("Array is Cube Perfect");
+//        } else {
+//            System.out.print("Array is not Cube Perfect");
+//        }
+        int num = -101;
+        System.out.println("The count of 1's in binary is: "+Solution3.countOnes(num));
     }
 }
 

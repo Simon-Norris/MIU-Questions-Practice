@@ -150,4 +150,17 @@ public class Solution3 {
         }
         return 1;
     }
+
+    public static int countOnes(int num) {
+        if (num > 0) {
+            int count = 0;
+            while (num > 0) {
+                int rem = num % 2;
+                if (rem == 1) count++;
+                num = num / 2;
+            }
+            return count;
+        }
+        return 0;
+    }
 }
