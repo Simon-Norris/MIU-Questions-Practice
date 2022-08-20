@@ -163,4 +163,32 @@ public class Solution3 {
         }
         return 0;
     }
+
+    public static int isDaphne(int[] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[0] % 2 == 0) {
+                if (arr[i] % 2 != 0) {
+                    return 0;
+                }
+            }
+            if (arr[0] % 2 != 0) {
+                if (arr[i] % 2 == 0) {
+                    return 0;
+                }
+            }
+        }
+        return 1;
+    }
+
+    public static int isOddValent (int[ ] a) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) {
+                for (int j = i+1; j < a.length; j++) {
+                    if (a[i] == a[j]) return 1;
+                }
+            }
+        }
+        return 0;
+    }
 }

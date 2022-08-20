@@ -49,8 +49,24 @@ public class Main
 //        } else {
 //            System.out.print("Array is not Cube Perfect");
 //        }
-        int num = -101;
-        System.out.println("The count of 1's in binary is: "+Solution3.countOnes(num));
+//        int num = -101;
+//        System.out.println("The count of 1's in binary is: "+Solution3.countOnes(num));
+
+        int[] arr = {2,5,2,3}  ;
+        int re = Solution3.isDaphne(arr);
+        if (re == 1){
+            System.out.print("Array is Danphe array");
+        } else {
+            System.out.print("Array is not Danphe array");
+        }
+
+        int[] arr1 = {8, 8, 8, 4, 4, 7, 2};
+        int re1 = Solution3.isOddValent(arr1);
+        if (re1 == 1){
+            System.out.print("Array is Odd valent array");
+        } else {
+            System.out.print("Array is not Odd Valent array");
+        }
     }
 }
 
