@@ -52,4 +52,14 @@ public class Solution4 {
         }
         return 1;
     }
+
+    public static int isCentered(int[] a) {
+        if (a.length % 2 == 0) return 0;
+        int midElement = a.length / 2;
+        for (int j = 0; j < a.length; j++) {
+            if (j == midElement) continue;
+            if (a[j] <= a[midElement]) return 0;
+        }
+        return 1;
+    }
 }

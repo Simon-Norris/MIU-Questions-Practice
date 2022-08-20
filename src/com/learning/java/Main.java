@@ -9,12 +9,20 @@ public class Main
 //        int n = 99;
 //        System.out.println("Is prime Product ? : "+Solution4.isPrimeProduct(n));
 
-        int[] arr =  {6, 7, 2, 3, 12};
-        int response = Solution4.isBalanced(arr);
+//        int[] arr =  {6, 7, 2, 3, 12};
+//        int response = Solution4.isBalanced(arr);
+//        if (response == 1) {
+//            System.out.println("Array is Balanced");
+//        } else {
+//            System.out.println("Array is not Balanced");
+//        }
+
+        int[] arr =   {9} ;
+        int response = Solution4.isCentered(arr);
         if (response == 1) {
-            System.out.println("Array is Balanced");
+            System.out.println("Array is Centered");
         } else {
-            System.out.println("Array is not Balanced");
+            System.out.println("Array is not Centered");
         }
     }
 }
