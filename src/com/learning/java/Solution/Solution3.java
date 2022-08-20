@@ -191,4 +191,26 @@ public class Solution3 {
         }
         return 0;
     }
+
+    public static int isNormal(int n) {
+        if (n <= 0) return 0;
+        int count = 0;
+        for (int i = 2; i <= n/2; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+        int[] arr = new int[count];
+        int k=0;
+        for (int i = 2; i <= n/2; i++) {
+            if (n % i == 0) {
+                arr[k++] = i;
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) return 0;
+        }
+        return 1;
+
+    }
 }
