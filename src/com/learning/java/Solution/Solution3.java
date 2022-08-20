@@ -137,27 +137,16 @@ public class Solution3 {
         for (int i=0; i<a.length;i++) {
             int num = a[i];
             boolean flag = false;
-            if (num < 0) {
-                int j = -1;
-                while ((j*j*j) >= num) {
-                    if ((j*j*j) == num) {
-                        flag = true;
-                        break;
-                    }
-                    j--;
+            if (num < 0) num = num * -1;
+            int j = 0;
+            while ((j*j*j) <= num) {
+                if ((j*j*j) == num) {
+                    flag = true;
+                    break;
                 }
-            } else {
-                int j = 0;
-                while ((j*j*j) <= num) {
-                    if ((j*j*j) == num) {
-                        flag = true;
-                        break;
-                    }
-                    j++;
-                }
+                j++;
             }
             if (!flag) return 0;
-
         }
         return 1;
     }
