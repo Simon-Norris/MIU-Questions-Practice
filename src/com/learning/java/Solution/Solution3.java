@@ -277,4 +277,16 @@ public class Solution3 {
         return 1;
     }
 
+    public static int isDigitSum(int n, int m) {
+        if (n < 0 || m < 0) return -1;
+        int sum =0;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        if (sum < m) return 1;
+        return 0;
+
+    }
+
 }
