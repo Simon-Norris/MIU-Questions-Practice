@@ -311,4 +311,15 @@ public class Solution3 {
         if (primeNotFound) return 1;
         return 0;
     }
+    public static int isEvens(int n){
+        if (n <= 1) return 0;
+
+        while (n != 0){
+            int rem = n % 10;
+            if (rem % 2 != 0) return 0;
+            n = n / 10;
+        }
+        return 1;
+    }
+
 }

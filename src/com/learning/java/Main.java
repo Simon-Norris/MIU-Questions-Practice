@@ -86,12 +86,20 @@ public class Main
 //        int m = 3;
 //        System.out.println("Is Digit Sum ? "+Solution3.isDigitSum(n,m));
 
-        int[] arr = {1, 3, 7,5, 11,13};
-        int re = Solution3.isFineArray(arr);
+//        int[] arr = {1, 3, 7,5, 11,13};
+//        int re = Solution3.isFineArray(arr);
+//        if (re == 1){
+//            System.out.print("Array is Fine array");
+//        } else {
+//            System.out.print("Array is not Fine array");
+//        }
+
+        int num = 22;
+        int re = Solution3.isEvens(num);
         if (re == 1){
-            System.out.print("Array is Fine array");
+            System.out.print("Array is Evens.");
         } else {
-            System.out.print("Array is not Fine array");
+            System.out.print("Array is not Evens.");
         }
     }
 }
