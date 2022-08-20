@@ -322,4 +322,29 @@ public class Solution3 {
         return 1;
     }
 
+    public static int isMagicArray (int[] a) {
+        if (a == null || a.length == 0) return 0;
+        int firstElement = a[0];
+
+        if (a.length == 1){
+            if (isPrime(firstElement)) return 1;
+            else return 0;
+        }
+
+        if (firstElement == 0) {
+            for (int i = 1; i < a.length; i++) {
+                if (isPrime(a[i])) return 0;
+            }
+        } else {
+            int totalOfAllPrime = 0;
+            for (int i = 1; i < a.length; i++) {
+                if (isPrime(a[i])){
+                    totalOfAllPrime += a[i];
+                }
+            }
+            if (totalOfAllPrime != firstElement) return 0;
+        }
+        return 1;
+    }
+
 }

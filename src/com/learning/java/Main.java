@@ -94,12 +94,20 @@ public class Main
 //            System.out.print("Array is not Fine array");
 //        }
 
-        int num = 22;
-        int re = Solution3.isEvens(num);
+//        int num = 22;
+//        int re = Solution3.isEvens(num);
+//        if (re == 1){
+//            System.out.print("Array is Evens.");
+//        } else {
+//            System.out.print("Array is not Evens.");
+//        }
+
+        int[] arr = {4};
+        int re = Solution3.isMagicArray(arr);
         if (re == 1){
-            System.out.print("Array is Evens.");
+            System.out.print("Array is Magic array.");
         } else {
-            System.out.print("Array is not Evens.");
+            System.out.print("Array is not Magic array.");
         }
     }
 }
