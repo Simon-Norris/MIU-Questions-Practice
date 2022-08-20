@@ -68,8 +68,11 @@ public class Main
 //            System.out.print("Array is not Odd Valent array");
 //        }
 
-        int num = 16;
-        System.out.println("Is this normal number? "+Solution3.isNormal(num));
+//        int num = 16;
+//        System.out.println("Is this normal number? "+Solution3.isNormal(num));
+
+        int[] arr = {3, 2, 1, 0, 4};
+        System.out.println("Is an array of all possibilities? "+Solution3.isAllPossibilities(arr));
     }
 }
 

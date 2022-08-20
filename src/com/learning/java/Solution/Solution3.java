@@ -213,4 +213,38 @@ public class Solution3 {
         return 1;
 
     }
+
+    public static int isAllPossibilities(int[] a){
+        if (a == null || a.length == 0) return 0;
+
+        int zero = 0;
+        boolean zeroFound = false;
+
+        int lastNumber = a.length -1;
+        boolean lastNumberFound = false;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 0)  {
+                zeroFound = true;
+                break;
+            }
+        }
+        if (!zeroFound) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == lastNumber)  {
+                lastNumberFound = true;
+                break;
+            }
+        }
+        if (!lastNumberFound) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (zero <= a[i] && a[i] <= lastNumber) {
+            } else {
+                return 0;
+            }
+        }
+        return 1;
+    }
 }
