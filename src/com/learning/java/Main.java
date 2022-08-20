@@ -102,12 +102,20 @@ public class Main
 //            System.out.print("Array is not Evens.");
 //        }
 
-        int[] arr = {4};
-        int re = Solution3.isMagicArray(arr);
+//        int[] arr = {4};
+//        int re = Solution3.isMagicArray(arr);
+//        if (re == 1){
+//            System.out.print("Array is Magic array.");
+//        } else {
+//            System.out.print("Array is not Magic array.");
+//        }
+
+        int[] arr =  {-5, 6, 2, 3, 2, 4, 5, 11, 8, 7};
+        int re = Solution3.isComplete(arr);
         if (re == 1){
-            System.out.print("Array is Magic array.");
+            System.out.print("Array is Complete.");
         } else {
-            System.out.print("Array is not Magic array.");
+            System.out.print("Array is not Complete.");
         }
     }
 }

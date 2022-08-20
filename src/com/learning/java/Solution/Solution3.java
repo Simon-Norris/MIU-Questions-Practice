@@ -347,4 +347,41 @@ public class Solution3 {
         return 1;
     }
 
+    public static int isComplete (int[ ] a){
+        if (a == null || a.length <= 1) return 0;
+        int countOfEvens = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) countOfEvens++;
+        }
+        if (countOfEvens < 2) return 0;
+        int[] evenArray = new int[countOfEvens];
+        int k=0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) evenArray[k++] = a[i];
+        }
+        for (int i = 1; i < countOfEvens; i++) {
+            int key = evenArray[i];
+            int j = i-1;
+            while (j >=0 && evenArray[j] >= key) {
+                evenArray[j+1] = evenArray[j];
+                j--;
+            }
+            evenArray[j+1] = key;
+        }
+        int min = evenArray[0];
+        int max = evenArray[evenArray.length-1];
+        if (min >= max) return 0;
+        for (int i = min+1; i < max; i++) {
+            boolean foundEl = false;
+            for (int j = 0; j < a.length; j++) {
+                if (i == a[j]) {
+                    foundEl = true;
+                    break;
+                }
+            }
+            if (!foundEl) return 0;
+        }
+        return 1;
+    }
+
 }
