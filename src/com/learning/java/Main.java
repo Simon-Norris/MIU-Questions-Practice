@@ -40,8 +40,15 @@ public class Main
 //            System.out.print("Number is not Zero Balanced!");
 //        }
 
-        System.out.println("Smallest BEQ number is "+Solution3.findSmallestBEQNumber());
+//        System.out.println("Smallest BEQ number is "+Solution3.findSmallestBEQNumber());
 
+        int[] arr = {-1, 1, -8, -27, 8}    ;
+        int re = Solution3.isCubePerfect(arr);
+        if (re == 1){
+            System.out.print("Array is Cube Perfect");
+        } else {
+            System.out.print("Array is not Cube Perfect");
+        }
     }
 }
 

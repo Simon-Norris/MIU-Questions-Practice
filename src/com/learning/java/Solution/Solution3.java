@@ -133,4 +133,32 @@ public class Solution3 {
             if (countSixes == 4) return i;
         }
     }
+    public static int isCubePerfect(int[] a) {
+        for (int i=0; i<a.length;i++) {
+            int num = a[i];
+            boolean flag = false;
+            if (num < 0) {
+                int j = -1;
+                while ((j*j*j) >= num) {
+                    if ((j*j*j) == num) {
+                        flag = true;
+                        break;
+                    }
+                    j--;
+                }
+            } else {
+                int j = 0;
+                while ((j*j*j) <= num) {
+                    if ((j*j*j) == num) {
+                        flag = true;
+                        break;
+                    }
+                    j++;
+                }
+            }
+            if (!flag) return 0;
+
+        }
+        return 1;
+    }
 }
