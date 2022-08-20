@@ -40,4 +40,16 @@ public class Solution4 {
         }
         return 0;
     }
+
+    public static int isBalanced(int[] a) {
+        if (a == null || a.length <= 1) return 0;
+        for (int i = 0; i < a.length; i++) {
+           if ( i % 2 == 0) {
+               if (a[i] % 2 != 0) return 0;
+           } else {
+               if (a[i] % 2 == 0) return 0;
+           }
+        }
+        return 1;
+    }
 }
