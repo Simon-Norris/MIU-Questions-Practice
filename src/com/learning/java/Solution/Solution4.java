@@ -93,4 +93,17 @@ public class Solution4 {
         }
         return 1;
     }
+
+    public static int[] fill(int[] arr, int k, int n) {
+        if (arr == null || k <= 0|| n<= 0) return null;
+        int[] arr2 = new int[n];
+        int i=0;
+        while (i < arr2.length){
+            for (int j = 0; j < k && i< arr2.length; j++) {
+                arr2[i] = arr[j];
+                i++;
+            }
+        }
+        return arr2;
+    }
 }
