@@ -78,4 +78,19 @@ public class Solution4 {
         }
         return hasKSmallFactors;
     }
+
+    public static int isZeroLimited(int[] arr) {
+        if (arr.length == 0 || arr.length == 1) return 1;
+        int n=0;
+        for (int i = 0; i < arr.length; i++) {
+            int index = 3*n + 1;
+            if (i == index) {
+                if (arr[i] != 0) return 0;
+                else n++;
+            } else {
+                if (arr[i] == 0) return 0;
+            }
+        }
+        return 1;
+    }
 }

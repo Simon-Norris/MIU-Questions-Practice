@@ -25,12 +25,20 @@ public class Main
 //            System.out.println("Array is not Centered");
 //        }
 
-        int m=4,n=6;
-        boolean response = Solution4.hasKSmallFactors(m,n);
-        if (response) {
-            System.out.println("Has K Small Factors");
+//        int m=4,n=6;
+//        boolean response = Solution4.hasKSmallFactors(m,n);
+//        if (response) {
+//            System.out.println("Has K Small Factors");
+//        } else {
+//            System.out.println("Doesn't have k small factors");
+//        }
+
+        int[] arr = {1, 0, 5, -1, 0, 2, 3, 0, 8};
+        int response = Solution4.isZeroLimited(arr);
+        if (response == 1) {
+            System.out.println("Array is Zero Limited");
         } else {
-            System.out.println("Doesn't have k small factors");
+            System.out.println("Array isn't Zero Limited");
         }
     }
 }
