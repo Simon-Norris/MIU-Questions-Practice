@@ -99,7 +99,7 @@ public class Solution4 {
         int[] arr2 = new int[n];
         int i=0;
         while (i < arr2.length){
-            for (int j = 0; j < k && i< arr2.length; j++) {
+            for (int j = 0; j < k && i< arr2.length; j++) { // j < k && i< arr2.length so that the i doesn't gets out of bound
                 arr2[i] = arr[j];
                 i++;
             }
