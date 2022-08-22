@@ -19,12 +19,20 @@ public class Main
 //            System.out.println("Is Bunker Array?: false");
 //        }
 
-        int[] arr ={3,-5,2, 4};
-        int response = Solution5.isMeera(arr);
+//        int[] arr ={3,-5,2, 4};
+//        int response = Solution5.isMeera(arr);
+//        if (response == 1) {
+//            System.out.println("Is Meera Array?: true");
+//        } else{
+//            System.out.println("Is Meera Array?: false");
+//        }
+
+        int num =22;
+        int response = Solution5.isMeeraNumber(num);
         if (response == 1) {
-            System.out.println("Is Meera Array?: true");
+            System.out.println("Is Meera Number?: true");
         } else{
-            System.out.println("Is Meera Array?: false");
+            System.out.println("Is Meera Number?: false");
         }
 
     }

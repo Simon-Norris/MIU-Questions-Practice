@@ -39,4 +39,23 @@ public class Solution5 {
         }
         return 1;
     }
+
+    public static int isMeeraNumber(int n) {
+        if (n <= 1) return 0;
+        int countFactors = 0;
+        for (int i = 2; i <= n/2; i++) {
+            if (n % i == 0) {
+                countFactors++;
+            }
+        }
+
+        for (int i = 2; i <= n/2; i++) {
+            if (n % i == 0) {
+                if (i == countFactors) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+    }
 }
