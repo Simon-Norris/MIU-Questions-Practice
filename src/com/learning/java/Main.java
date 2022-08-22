@@ -35,12 +35,20 @@ public class Main
 //            System.out.println("Is Meera Number?: false");
 //        }
 
-        int[] arr ={3, 7, 1, 8, 1};
-        int response = Solution5.isBunker(arr);
+//        int[] arr ={3, 7, 1, 8, 1};
+//        int response = Solution5.isBunker(arr);
+//        if (response == 1) {
+//            System.out.println("Is Bunker ?: true");
+//        } else{
+//            System.out.println("Is Bunker ?: false");
+//        }
+
+        int[] arr ={0,-1,2};
+        int response = Solution5.isNiceArray(arr);
         if (response == 1) {
-            System.out.println("Is Bunker ?: true");
+            System.out.println("Is Nice Array ?: true");
         } else{
-            System.out.println("Is Bunker ?: false");
+            System.out.println("Is Nice Array ?: false");
         }
 
     }

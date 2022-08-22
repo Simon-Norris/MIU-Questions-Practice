@@ -70,4 +70,23 @@ public class Solution5 {
         }
         return 0;
     }
+
+    public static int isNiceArray(int[] a) {
+        if (a == null || a.length <= 2) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            int valuePlusOne = a[i]+1;
+            int valueMinusOne = a[i]-1;
+            boolean valueFound = false;
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == valuePlusOne || a[j] == valueMinusOne) {
+                    valueFound = true;
+                    break;
+                }
+            }
+            if (!valueFound) return 0;
+
+        }
+        return 1;
+    }
 }
