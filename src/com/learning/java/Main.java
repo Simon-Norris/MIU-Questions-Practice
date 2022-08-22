@@ -53,8 +53,8 @@ public class Main
 //        } else{
 //            System.out.print(response);
 //        }
-        int num = 8;
-        System.out.println("The minimum distance between the factors of given number is: "+Solution4.minDistance(num));
+        int num = 11;
+        System.out.println("The minimum distance between the factors of given number is: "+Solution4.minDistance2(num));
     }
 }
 

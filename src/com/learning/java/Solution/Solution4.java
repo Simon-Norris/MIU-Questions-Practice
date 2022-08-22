@@ -125,4 +125,18 @@ public class Solution4 {
         }
         return minDistance;
     }
+
+    public static  int minDistance2(int n){
+        if (n <= 1) return 0;
+        int min = n, prevFactor = 1;
+        for (int i = 2; i <= n; i++) {
+            if (n % i == 0) {
+                if ((i-prevFactor) < min) {
+                    min = i - prevFactor;
+                }
+                prevFactor = i;
+            }
+        }
+        return min;
+    }
 }
