@@ -151,4 +151,32 @@ public class Solution4 {
         }
         return 1;
     }
+
+    public static int isBean (int[ ] a){
+        if (a == null || a.length == 0) return 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 9){
+                boolean thirteenFound = false;
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] == 13) {
+                        thirteenFound = true;
+                        break;
+                    }
+                }
+                if (!thirteenFound) return 0;
+            }
+            if (a[i] == 7) {
+                boolean contains16 = false;
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] == 16) {
+                        contains16 = true;
+                        break;
+                    }
+                }
+                if (contains16) return 0;
+            }
+        }
+        return 1;
+    }
+
 }

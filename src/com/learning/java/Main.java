@@ -57,12 +57,21 @@ public class Main
 //        int num = 11;
 //        System.out.println("The minimum distance between the factors of given number is: "+Solution4.minDistance2(num));
 
-        int[] arr = {4,1,1,1};
-        int response = Solution4.isWave(arr);
+//        int[] arr = {4,1,1,1};
+//        int response = Solution4.isWave(arr);
+//        if (response == 1) {
+//           System.out.println("Is Wave Array?: true");
+//        } else{
+//            System.out.println("Is Wave Array?: false");
+//        }
+
+
+        int[] arr ={ 9, 6, 18};
+        int response = Solution4.isBean(arr);
         if (response == 1) {
-           System.out.println("Is Wave Array?: true");
+           System.out.println("Is Bean Array?: true");
         } else{
-            System.out.println("Is Wave Array?: false");
+            System.out.println("Is Bean Array?: false");
         }
     }
 }
