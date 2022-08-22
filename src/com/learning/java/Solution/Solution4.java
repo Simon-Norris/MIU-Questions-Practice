@@ -106,4 +106,23 @@ public class Solution4 {
         }
         return arr2;
     }
+
+    public static  int minDistance(int n){
+        if (n <= 1) return 0;
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) count++;
+        }
+        int[] arr = new int[count];
+        int k = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) arr[k++] = i;
+        }
+        int minDistance = arr[arr.length-1];
+        for (int i = 0; i < arr.length-1; i++) {
+            int var = arr[i + 1] - arr[i];
+            if (var < minDistance) minDistance = var;
+        }
+        return minDistance;
+    }
 }

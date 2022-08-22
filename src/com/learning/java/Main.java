@@ -42,17 +42,19 @@ public class Main
 //        }
 
 
-        int[] arr = {4, 2, -3, 12};
-        int k =0;
-        int n =5;
-        int[] response = Solution4.fill(arr,k,n);
-        if (response != null) {
-            for (int i = 0; i < response.length; i++) {
-                System.out.print(response[i] + " ");
-            }
-        } else{
-            System.out.print(response);
-        }
+//        int[] arr = {4, 2, -3, 12};
+//        int k =0;
+//        int n =5;
+//        int[] response = Solution4.fill(arr,k,n);
+//        if (response != null) {
+//            for (int i = 0; i < response.length; i++) {
+//                System.out.print(response[i] + " ");
+//            }
+//        } else{
+//            System.out.print(response);
+//        }
+        int num = 8;
+        System.out.println("The minimum distance between the factors of given number is: "+Solution4.minDistance(num));
     }
 }
 
