@@ -58,4 +58,16 @@ public class Solution5 {
         }
         return 0;
     }
+
+    public static int isBunker(int[] a) {
+        if (a == null || a.length == 0) return 0;
+        for (int i = 0; i < a.length; i++) {
+            if (isPrime(a[i]) == 1) {
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] == 1) return 1;
+                }
+            }
+        }
+        return 0;
+    }
 }

@@ -27,12 +27,20 @@ public class Main
 //            System.out.println("Is Meera Array?: false");
 //        }
 
-        int num =22;
-        int response = Solution5.isMeeraNumber(num);
+//        int num =22;
+//        int response = Solution5.isMeeraNumber(num);
+//        if (response == 1) {
+//            System.out.println("Is Meera Number?: true");
+//        } else{
+//            System.out.println("Is Meera Number?: false");
+//        }
+
+        int[] arr ={3, 7, 1, 8, 1};
+        int response = Solution5.isBunker(arr);
         if (response == 1) {
-            System.out.println("Is Meera Number?: true");
+            System.out.println("Is Bunker ?: true");
         } else{
-            System.out.println("Is Meera Number?: false");
+            System.out.println("Is Bunker ?: false");
         }
 
     }
