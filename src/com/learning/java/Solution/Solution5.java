@@ -27,4 +27,16 @@ public class Solution5 {
         }
         return 0;
     }
+
+    public static int isMeera(int[] a){
+        if (a == null || a.length == 0) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            int doubleNumber = 2 * a[i];
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == doubleNumber) return 0;
+            }
+        }
+        return 1;
+    }
 }
