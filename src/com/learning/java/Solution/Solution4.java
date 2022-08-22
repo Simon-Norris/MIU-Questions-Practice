@@ -139,4 +139,16 @@ public class Solution4 {
         }
         return min;
     }
+
+    public static  int isWave (int [ ] a) {
+        if (a == null || a.length == 0) return 0;
+        for (int i = 0; i < a.length-1; i++) {
+            if ( a[i] % 2 == 0) {
+                if ( a[i+1] % 2 == 0) return 0;
+            } else {
+                if (a[i+1] % 2 != 0) return 0;
+            }
+        }
+        return 1;
+    }
 }
