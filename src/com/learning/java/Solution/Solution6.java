@@ -80,4 +80,21 @@ public class Solution6 {
         }
         return 0;
     }
+
+    public static int isBeanArray(int[] a) {
+        if (a == null || a.length <= 1) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            boolean found = false;
+            for (int j = 0; j < a.length; j++) {
+                if (a[j] == a[i]+1 || a[j] == a[i]-1) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) return 0;
+        }
+        return 1;
+    }
 }

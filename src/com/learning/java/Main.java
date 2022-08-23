@@ -46,6 +46,14 @@ public class Main
             System.out.println("Is fibonacci?: false");
         }
 
+        int[] arr4 =  {3, 1, 6, 1, 3, 1, 3, 2, 2};
+        int re5 = Solution6.isBeanArray(arr4);
+        if (re5 == 1) {
+            System.out.println("Is Bean Array?: true");
+        } else{
+            System.out.println("Is Bean Array?: false");
+        }
+
     }
 }
 
