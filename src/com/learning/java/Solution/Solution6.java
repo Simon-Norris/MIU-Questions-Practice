@@ -124,4 +124,30 @@ public class Solution6 {
         }
         return 0;
     }
+
+    public static int isOddHeavy(int[] a){
+        if (a == null || a.length == 0) return 0;
+
+        boolean oneOdd = false;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) {
+                oneOdd = true;
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] % 2 == 0 && a[j] > a[i]) return 0;
+                }
+            }
+        }
+        if (!oneOdd) return 0;
+        return 1;
+    }
+
+    public static int isNormal(int n) {
+        if (n <= 1) return 0;
+
+        for (int i = 2; i <= n/2 ; i++) {
+            if (n % i == 0 &&  i % 2 != 0) return 0;
+        }
+
+        return 1;
+    }
 }

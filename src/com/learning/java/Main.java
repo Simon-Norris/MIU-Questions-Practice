@@ -70,6 +70,22 @@ public class Main
             System.out.println("Is Bunker Num?: false");
         }
 
+        int[] arr5 = {-2, -4, -6, -8, -11};
+        int re4 = Solution6.isOddHeavy(arr5);
+        if (re4 == 1) {
+            System.out.println("Is Odd Heavy Array ?: true");
+        } else{
+            System.out.println("Is Odd Heavy Array ?: false");
+        }
+
+        int numb = 8;
+        int re3 = Solution6.isNormal(numb);
+        if (re3 == 1) {
+            System.out.println("Is Normal Num?: true");
+        } else{
+            System.out.println("Is Normal Num?: false");
+        }
+
     }
 }
 
