@@ -97,4 +97,31 @@ public class Solution6 {
         }
         return 1;
     }
+
+    public static int isFancyArray(int n) {
+        if (n == 0) return 0;
+        if (n == 1) return 1;
+        int grandParent = 1;
+        int parent = 1;
+        for (int i = 0; i < n; i++) {
+            int fancyNum = 3 * parent + 2 * grandParent;
+            if (fancyNum == n) return 1;
+            grandParent = parent;
+            parent = fancyNum;
+        }
+        return 0;
+    }
+
+    public static int isBunker(int n) {
+        if (n == 0) return 0;
+
+        int previous = 1;
+
+        for (int i = 0; i < n; i++) {
+            int next = i + previous;
+            if (n == next) return 1;
+            previous = next;
+        }
+        return 0;
+    }
 }

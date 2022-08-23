@@ -54,6 +54,22 @@ public class Main
             System.out.println("Is Bean Array?: false");
         }
 
+        int num = 22;
+        int re = Solution6.isFancyArray(num);
+        if (re == 1) {
+            System.out.println("Is Fancy Num?: true");
+        } else{
+            System.out.println("Is Fancy Num?: false");
+        }
+
+        int num1 = 22;
+        int re1 = Solution6.isBunker(num1);
+        if (re1 == 1) {
+            System.out.println("Is Bunker Num?: true");
+        } else{
+            System.out.println("Is Bunker Num?: false");
+        }
+
     }
 }
 
