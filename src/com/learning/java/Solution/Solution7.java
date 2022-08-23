@@ -61,21 +61,37 @@ public class Solution7 {
         int evenCount1 = 0;
         int evenCount2 = 0;
 
+        int firstOddInedx = 0;
+        int lastOddIndex = 0;
+
         boolean oddFound = false;
         for (int i = 0; i < a.length; i++) {
             if (a[i] % 2 != 0) {
                 oddFound = true;
+                firstOddInedx = i;
                 break;
             }
         }
 
-        if (!oddFound) return 0;
+        if (!oddFound || firstOddInedx == a.length-1) return 0;
 
-        for (int i = 0; i < a.length; i++) {
+        boolean oddFound1 = false;
+
+        for (int i = a.length - 1; i >= 0; i--) {
+            if (a[i] % 2 != 0) {
+                oddFound1 = true;
+                lastOddIndex = i;
+                break;
+            }
+        }
+
+        if (!oddFound1 || lastOddIndex == 0) return 0;
+
+        for (int i = 0; i < firstOddInedx; i++) {
             if (a[i] % 2 == 0) evenCount1++;
             else break;
         }
-        for (int i = a.length-1; i >= 0; i--) {
+        for (int i = a.length-1; i >= lastOddIndex; i--) {
             if (a[i] % 2 == 0) evenCount2++;
             else break;
         }

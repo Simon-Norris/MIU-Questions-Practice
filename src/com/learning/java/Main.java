@@ -34,7 +34,7 @@ public class Main
 
         System.out.println("The count of 2 is " + Solution7.factorTwoCount(96));
 
-        int[] arr3 = {4, 8, 6, 1, 12, 1, 6};
+        int[] arr3 = {4, 8, 6, 1,2,3, 12, 6, 6};
         int response3 = Solution7.isDanpheArray(arr3);
         if (response3 == 1) {
             System.out.println("Is Danphe Array?: true");
