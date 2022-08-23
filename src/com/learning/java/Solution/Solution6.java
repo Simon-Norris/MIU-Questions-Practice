@@ -67,4 +67,17 @@ public class Solution6 {
         }
         return 1;
     }
+
+    public static int isFibonacci(int n) {
+        if (n <= 0) return 0;
+        int previous = 1;
+        int beforePrevious = 1;
+        for (int i = 0; i < n; i++) {
+            int sum = previous + beforePrevious;
+            if (sum == n) return 1;
+            beforePrevious = previous;
+            previous = sum;
+        }
+        return 0;
+    }
 }

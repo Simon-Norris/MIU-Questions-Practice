@@ -38,6 +38,14 @@ public class Main
             System.out.println("Is Triple Array?: false");
         }
 
+        int n1=44;
+        int response4 = Solution6.isFibonacci(n1);
+        if (response4 == 1) {
+            System.out.println("Is fibonacci ?: true");
+        } else{
+            System.out.println("Is fibonacci?: false");
+        }
+
     }
 }
 
