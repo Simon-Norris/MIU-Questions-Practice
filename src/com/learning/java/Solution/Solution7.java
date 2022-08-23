@@ -44,4 +44,42 @@ public class Solution7 {
         return 1;
     }
 
+    public static int factorTwoCount(int n) {
+        if (n <= 0) return 0;
+
+        int count = 0;
+        while (n % 2 == 0) {
+            count++;
+            n = n/2;
+        }
+        return count;
+    }
+
+    public static int isDanpheArray(int[] a) {
+        if (a == null || a.length == 0) return 0;
+
+        int evenCount1 = 0;
+        int evenCount2 = 0;
+
+        boolean oddFound = false;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) {
+                oddFound = true;
+                break;
+            }
+        }
+
+        if (!oddFound) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) evenCount1++;
+            else break;
+        }
+        for (int i = a.length-1; i >= 0; i--) {
+            if (a[i] % 2 == 0) evenCount2++;
+            else break;
+        }
+        if(evenCount1 != evenCount2) return 0;
+        return 1;
+    }
 }
