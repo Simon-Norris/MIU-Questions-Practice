@@ -43,12 +43,53 @@ public class Main
 //            System.out.println("Is Bunker ?: false");
 //        }
 
-        int[] arr ={0,-1,2};
-        int response = Solution5.isNiceArray(arr);
+//        int[] arr ={0,-1,2};
+//        int response = Solution5.isNiceArray(arr);
+//        if (response == 1) {
+//            System.out.println("Is Nice Array ?: true");
+//        } else{
+//            System.out.println("Is Nice Array ?: false");
+//        }
+
+        int num = 40;
+        int response = Solution5.isContinousFactored(num);
         if (response == 1) {
-            System.out.println("Is Nice Array ?: true");
+            System.out.println("Is Continuous Factored?: true");
         } else{
-            System.out.println("Is Nice Array ?: false");
+            System.out.println("Is Continuous Factored?: false");
+        }
+
+        int[] arr = {1, 17, 8, 25, 19} ;
+        int response1 = Solution5.isTwin(arr);
+        if (response1 == 1) {
+            System.out.println("Is Twin Array?: true");
+        } else{
+            System.out.println("Is Twin Array?: false");
+        }
+
+        int[] arr1 = {9, 1, 12, 1};
+        int[] arr2 = {1, 9, 12, 9, 12, 1, 9};
+        int response2 = Solution5.isSetEqual(arr1, arr2);
+        if (response2 == 1) {
+            System.out.println("Is Set Equal?: true");
+        } else{
+            System.out.println("Is Set Equal?: false");
+        }
+
+        int num1 = 2;
+        int response3 = Solution5.isSmart(num1);
+        if (response3 == 1) {
+            System.out.println("Is Smart ?: true");
+        } else{
+            System.out.println("Is Smart?: false");
+        }
+
+        int[] arr3 = {0,2,1,1,1};
+        int response4 = Solution5.isNiceArrayAnother(arr3);
+        if (response4 == 1) {
+            System.out.println("Is Nice Array?: true");
+        } else{
+            System.out.println("Is Nice Array?: false");
         }
 
     }
