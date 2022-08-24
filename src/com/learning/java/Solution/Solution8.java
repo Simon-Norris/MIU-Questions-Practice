@@ -31,4 +31,45 @@ public class Solution8 {
 
         return false;
     }
+
+    public static int isRiley (int n){
+        while ( n != 0) {
+            int r = n%10;
+            if (r % 2 != 0) return 0;
+            n /= 10;
+        }
+        return 1;
+    }
+
+    public static int lastEven (int[] a) {
+        if (a == null || a.length == 0) return -1;
+
+        for (int i = a.length-1; i >=  0; i--) {
+            if (a[i] % 2 == 0) return i;
+        }
+
+        return -1;
+    }
+
+    public static int isEvenSubset(int m, int n) {
+        if ( m == 0 || n == 0) return 0;
+
+        for (int i = 1; i <= m; i++) {
+            if (i % 2 == 0 && m % i == 0) {
+                boolean match = false;
+                for (int j = 1; j <= n; j++) {
+                    if (j % 2 == 0 && n % j == 0) {
+                        if (i == j) {
+                            match = true;
+                            break;
+                        }
+                    }
+                }
+                if (!match) return 0;
+            }
+        }
+
+        return 1;
+    }
+
 }

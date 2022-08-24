@@ -23,6 +23,24 @@ public class Main
             System.out.println("Sum is not Power");
         }
 
+        int two = -2126;
+        int response3 = Solution8.isRiley(two);
+        if (response3 == 1) {
+            System.out.println("Is Riley Number?: true");
+        } else {
+            System.out.println("Is Riley Number?: false");
+        }
+
+        int[] arr2 = {2};
+        System.out.println("The last even number index in given array is: "+Solution8.lastEven(arr2));
+
+        int m = 32, n= 18;
+        int response4 = Solution8.isEvenSubset(m, n);
+        if (response4 == 1) {
+            System.out.println("m is the even subset of n.");
+        } else {
+            System.out.println("m is not the even subset of n!!");
+        }
     }
 }
 
