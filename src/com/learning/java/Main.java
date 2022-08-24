@@ -41,6 +41,40 @@ public class Main
         } else {
             System.out.println("Is Danphe Array?: false");
         }
+
+        int[] arr4 = {6, 8, 6, 1,2,3, 12, 6, 6};
+        int response4 = Solution7.goodSpread(arr4);
+        if (response4 == 1) {
+            System.out.println("Is Good Spread Array?: true");
+        } else {
+            System.out.println("Is Good Spread Array?: false");
+        }
+
+        System.out.println("The Sum Digit is " + Solution7.sumDigits(-969234));
+
+        int[] arr5 =  {-4, 0, 1, 0, 2} ;
+        int response5 = Solution7.isMeera(arr5);
+        if (response5 == 1) {
+            System.out.println("Is Meera Array?: true");
+        } else {
+            System.out.println("Is Meera Array?: false");
+        }
+
+        int num = 29;
+        int response6 = Solution7.isGuthrie(num);
+        if (response6 == 1) {
+            System.out.println("Is Guthrie Num?: true");
+        } else {
+            System.out.println("Is Guthrie NUm?: false");
+        }
+
+        int num1 = 13;
+        int response7 = Solution7.isFibonacci(num1);
+        if (response7 == 1) {
+            System.out.println("Is Fibonacci Num?: true");
+        } else {
+            System.out.println("Is Fibonacci NUm?: false");
+        }
     }
 }
 
