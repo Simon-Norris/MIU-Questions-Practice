@@ -41,6 +41,14 @@ public class Main
         } else {
             System.out.println("m is not the even subset of n!!");
         }
+
+        int[] arr3 = {3, 3, 2, 2, 1, 7};
+        int response5 = Solution8.isTwinoid(arr3);
+        if (response5 == 1) {
+            System.out.println("Is Twinoid ? : true");
+        } else {
+            System.out.println("Is Twinoid ? : false");
+        }
     }
 }
 
