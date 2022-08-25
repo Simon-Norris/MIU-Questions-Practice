@@ -23,6 +23,29 @@ public class Main
         } else {
             System.out.println("Is Sym Array?: false");
         }
+
+        int response3 = Solution9.factorTwoCount(27);
+        System.out.print("Factor 2 count of given n is: "+response3);
+
+        int num = 24 ;
+        int response4 = Solution9.isConsecutiveFactored(num);
+        if (response4 == 1) {
+            System.out.println("Is Consecutive Factored?: true");
+        } else {
+            System.out.println("Is Consecutive Factored?: false");
+        }
+
+        int[] arr4 = {9,9,9,9,9,9,9,9,9,9};
+        int miles = 9;
+        Solution9.updateMileageCounter(arr4, miles);
+        for (int i = 0; i < arr4.length; i++) {
+            System.out.print(arr4[i] + " ");
+        }
+
+        double num6 = 2.0;
+        int[] arr6 = {4, 0, 9};
+        double response6 = Solution9.eval(num6,arr6);
+        System.out.print("Value of the polynomial is: "+response6);
     }
 }
 
