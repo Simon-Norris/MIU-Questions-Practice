@@ -49,6 +49,43 @@ public class Main
         } else {
             System.out.println("Is Twinoid ? : false");
         }
+
+        int[] arr4 = {3, -3, 2, -2, -1, 1};
+        int response6 = Solution8.isBalanced(arr4);
+        if (response6 == 1) {
+            System.out.println("Is Balanced? : true");
+        } else {
+            System.out.println("Is Balanced? : false");
+        }
+
+        int n1 = -250, p= 5;
+        int response7 = Solution8.getExponent(n1, p);
+        System.out.println("The exponenet of the given number n is: "+response7);
+
+
+        int[] arr5 = {1,1,1,1,1,1,1,2,2,1,1, 1};
+        int response8 = Solution8.is121Array(arr5);
+        if (response8 == 1) {
+            System.out.println("Is 121 Array? : true");
+        } else {
+            System.out.println("Is 121 array? : false");
+        }
+
+        int[] arr6 = {2, 4, 6, 8, 11} ;
+        int response9 = Solution8.isMaxMinEqual(arr6);
+        if (response9 == 1) {
+            System.out.println("Is Max Min Equal?: true");
+        } else {
+            System.out.println("Is Max Min Equal?: false");
+        }
+
+        int[] arr7 = {80, -56, 11, -81} ;
+        int response10 = Solution8.isOddSpaced(arr7);
+        if (response10 == 1) {
+            System.out.println("Is Array odd Spaced ?: true");
+        } else {
+            System.out.println("Is Array odd Spaced ?: false");
+        }
     }
 }
 
