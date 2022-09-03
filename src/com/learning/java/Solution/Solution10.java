@@ -188,4 +188,48 @@ public class Solution10 {
         }
         return arr;
     }
+
+    public static int stantonMeasure(int[] a) {
+        if (a == null || a.length == 0) return 0;
+
+        int count1s = 0;
+        for (int i =0; i< a.length; i++) {
+            if (a[i] == 1) count1s++;
+        }
+        int count = 0;
+        for (int i =0; i< a.length; i++) {
+            if (a[i] == count1s) count++;
+        }
+
+        return count;
+    }
+
+    public static int sumFactor(int[] a) {
+        if (a == null || a.length == 0) return 0;
+
+        int sum = 0;
+        for (int i =0; i< a.length; i++) {
+           sum += a[i];
+        }
+        int count = 0;
+        for (int i =0; i< a.length; i++) {
+            if (a[i] == sum) count++;
+        }
+        return count;
+    }
+
+    public static int gutherieIndex(int num) {
+        if (num <= 0) return 0;
+        int count = 0;
+        while (num != 1){
+            if (num % 2 == 0) {
+                num = num / 2;
+            } else{
+                num = num * 3 +1;
+            }
+            count++;
+        }
+
+        return count;
+    }
 }

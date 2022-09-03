@@ -37,6 +37,15 @@ public class Main
 
         int[] arr8 = {7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1};
         System.out.println("Is it gutherie sequence? "+Solution10.isGutherieSequence(arr8));
+
+        int[] arr9 = {1, 4, 3, 2, 1, 2, 3, 2};
+        System.out.println("The stanton measure of given array is "+Solution10.stantonMeasure(arr9));
+
+        int[] arr10 = {3, 0, 2, -5, 0} ;
+        System.out.println("The sum factor of given array is "+Solution10.sumFactor(arr10));
+
+        int num11 = 42;
+        System.out.println("The Guthrie index is  "+Solution10.gutherieIndex(num11));
     }
 }
 
