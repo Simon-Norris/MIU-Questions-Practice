@@ -93,4 +93,99 @@ public class Solution10 {
         if (!flag) return 0;
         return 1;
     }
+
+    public static int countSquarePairs(int[] a) {
+        if (a == null || a.length <= 1) return 0;
+
+        for (int i = 1; i < a.length; i++) {
+            int key = a[i];
+            int j = i-1;
+            while (j >=0 && a[j] > key) {
+                a[j+1] = a[j];
+                j--;
+            }
+            a[j+1] = key;
+        }
+
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                if ( i == j) continue;
+                int sum = a[i]+a[j];
+                if (( a[i] > 0 && a[j] > 0) && a[i] < a[j] && (isPerfectSquare(sum) == 1)) count++;
+            }
+        }
+        return count;
+    }
+
+    private static int isPerfectSquare(int n) {
+        for (int i = 0; i <= n; i++) {
+            if ( i * i == n) return 1;
+            if ( i * i > n) break;
+        }
+        return 0;
+    }
+
+    public static int isPrime(int n) {
+        if ( n <= 1) return 0;
+
+        for (int i = 2; i <= n/2; i++) {
+            if ( n % i == 0) return 0;
+        }
+
+        return 1;
+    }
+
+    public static int findProcupineNumber(int n) {
+        for (int i = n+1; ; i++) {
+            if (isPrime(i) == 1) {
+                if ( i % 10 == 9) {
+                    for (int j = i+1;  ; j++) {
+                        if (isPrime(j) == 1 && j % 10 == 9) {
+                            return i;
+                        }
+                        else if (isPrime(j) == 1 && j % 10 != 9) break;
+                    }
+                }
+            }
+        }
+    }
+
+    public static int isGutherieSequence(int[] a) {
+        if (a == null || a.length == 0) return 0;
+
+        int num = a[0];
+        if (a[a.length-1] != 1 || num <= 0) return 0;
+        int[] arr = createSequence(num);
+        if (arr.length != a.length) return 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != arr[i]) return 0;
+        }
+        return 1;
+    }
+
+    public static int[] createSequence(int num) {
+        int k=0, n = num;
+        while (num != 1){
+            if (num % 2 == 0) {
+                num = num / 2;
+            } else{
+                num = num * 3 +1;
+            }
+            k++;
+        }
+        int[] arr = new int[k+1];
+        arr[0] = n;
+        k=1;
+        while (n != 1){
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else{
+                n = n * 3 +1;
+            }
+            arr[k] = n;
+            k++;
+        }
+        return arr;
+    }
 }

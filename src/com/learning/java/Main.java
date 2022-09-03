@@ -28,6 +28,15 @@ public class Main
         int[] arr5 =  {2, 12, 4, 6, 8, 11};
 
         System.out.println("Is it inertial Array ? 1 means true: 0 means false: "+Solution10.isInertial(arr5));
+
+        int[] arr6 = {9, 0,2,-5, 7};
+        System.out.println("The total count of square pairs is : "+Solution10.countSquarePairs(arr6));
+
+        int num7 = 919;
+        System.out.println("The porcupine number is: "+Solution10.findProcupineNumber(num7));
+
+        int[] arr8 = {7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1};
+        System.out.println("Is it gutherie sequence? "+Solution10.isGutherieSequence(arr8));
     }
 }
 
