@@ -12,6 +12,10 @@ public class Main
         int[] arr1 = {0, 3, 2, 0, 5, 3};
         int n1 = 32053;
         System.out.println("Is reps equal ? "+Solution11.repsEqual(arr1, n1));
+
+        int i = 1;
+        int j = 5;
+        System.out.println("The henry sum is: " +Solution11.henry(i,j));
     }
 }
 

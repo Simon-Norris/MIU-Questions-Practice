@@ -41,4 +41,28 @@ public class Solution11 {
         }
         return 1;
     }
+
+    public static int henry (int i, int j) {
+        return findPerfectNumber(i) + findPerfectNumber(j);
+    }
+
+    private static int findPerfectNumber(int n) {
+        int timesPerfectNumberFound = 0;
+        for (int i = 1;  ; i++) {
+            if ( i == perfectNumber(i)) {
+                timesPerfectNumberFound++;
+                if (timesPerfectNumberFound == n) {
+                    return i;
+                }
+            }
+        }
+    }
+
+    private static int perfectNumber(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n/2; i++) {
+            if (n % i == 0) sum += i;
+        }
+        return sum;
+    }
 }
