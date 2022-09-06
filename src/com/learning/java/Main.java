@@ -24,6 +24,17 @@ public class Main
         int[] arr5 ={7, 3, 3, 2, 4} ;
         int n5 = 6;
         System.out.println("Is array nUnique ?: "+Solution11.nUnique(arr5,n5));
+
+        int n6 = 0;
+        System.out.println("Is Square?: "+Solution11.isSquare(n6));
+
+        int base = 2;
+        int[] a7 = {1,0,1,1};
+        System.out.println("Is Legal Number?: "+Solution11.isLegalNumber(a7, base));
+
+        int base1 = 2;
+        int[] a8 = {1,0,1,1};
+        System.out.println("The result after converted base to 10 is: "+Solution11.convertToBase10(a8, base1));
     }
 }
 

@@ -89,4 +89,39 @@ public class Solution11 {
         if (count != 1) return 0;
         return 1;
     }
+
+    public static int isSquare(int n) {
+
+        for (int i = 0; i <= n; i++) {
+            if ( i*i == n) return 1;
+            else if (i*i > n) break;
+        }
+
+        return 0;
+    }
+
+    public static int isLegalNumber(int[] a, int base) {
+        for (int i = 0; i < a.length; i++) {
+           if ( a[i] >= base) return 0;
+        }
+        return 1;
+    }
+
+    public static int convertToBase10(int[] a, int base) {
+        if (isLegalNumber(a, base) == 0) return -1;
+        int incrementor = 0, result = 0;
+        for (int i = a.length-1; i >= 0; i--) {
+            result += a[i] * power(base, incrementor);
+            incrementor++;
+        }
+        return result;
+    }
+
+    private static int power(int base, int incrementor) {
+        int result = 1;
+        for (int i = 0; i < incrementor; i++) {
+            result = result * base;
+        }
+        return result;
+    }
 }
