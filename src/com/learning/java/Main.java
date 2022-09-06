@@ -14,8 +14,16 @@ public class Main
         System.out.println("Is reps equal ? "+Solution11.repsEqual(arr1, n1));
 
         int i = 1;
-        int j = 5;
+        int j = 2;
         System.out.println("The henry sum is: " +Solution11.henry(i,j));
+
+        int[] arr4 = {24};
+        int diviosr = 12;
+        System.out.println("Is array divisble by divisor ?: "+Solution11.isDivisible(arr4,diviosr));
+
+        int[] arr5 ={7, 3, 3, 2, 4} ;
+        int n5 = 6;
+        System.out.println("Is array nUnique ?: "+Solution11.nUnique(arr5,n5));
     }
 }
 

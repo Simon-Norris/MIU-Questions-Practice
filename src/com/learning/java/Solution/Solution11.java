@@ -65,4 +65,28 @@ public class Solution11 {
         }
         return sum;
     }
+
+    public static int isDivisible(int[] a, int divisor){
+        for (int i = 0; i < a.length; i++) {
+           if (a[i] % divisor != 0) return 0;
+        }
+        return 1;
+    }
+
+    public static int nUnique(int[] a, int n) {
+
+        if ( a == null || a.length <= 1) return 0;
+
+        int count = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i+1; j < a.length; j++) {
+                if ( i == j ) continue;
+                if ( a[i] + a[j] == n) count++;
+            }
+        }
+
+        if (count != 1) return 0;
+        return 1;
+    }
 }
