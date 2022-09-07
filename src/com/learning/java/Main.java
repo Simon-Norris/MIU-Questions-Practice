@@ -11,6 +11,9 @@ public class Main
 
         int n2 = 7;
         System.out.println("Is stacked "+Solution12.isStacked(n2));
+
+        int[] arr3 = {1};
+        System.out.println("Is array vanilla ? "+Solution12.isVanilla(arr3));
     }
 }
 

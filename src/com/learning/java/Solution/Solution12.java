@@ -26,4 +26,18 @@ public class Solution12 {
         }
         return 0;
     }
+
+    public static int isVanilla(int[] a) {
+        if ( a ==null ||  a.length == 0) return 1;
+        int prev = a[0] % 10;
+        for (int i = 0; i < a.length; i++) {
+            int num = Math.abs(a[i]);
+            while (num != 0) {
+                int rem = num % 10;
+                if (prev != rem) return 0;
+                num = num / 10;
+            }
+        }
+        return 1;
+    }
 }
