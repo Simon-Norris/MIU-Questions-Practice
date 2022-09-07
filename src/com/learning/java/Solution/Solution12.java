@@ -13,4 +13,17 @@ public class Solution12 {
         }
         return 1;
     }
+
+    public static int isStacked(int n) {
+        int sum = 0;
+        int i =1;
+        while (sum <= n) {
+            sum += i;
+            if (sum == n) return 1;
+            if (sum > n) break;
+            i++;
+
+        }
+        return 0;
+    }
 }
