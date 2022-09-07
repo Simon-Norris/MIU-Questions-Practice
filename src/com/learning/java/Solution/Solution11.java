@@ -124,4 +124,55 @@ public class Solution11 {
         }
         return result;
     }
+
+    public static int computeDepth(int n) {
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = -1;
+        }
+        int k = 0;
+        int count =0;
+        for (int i = 1;  k != arr.length ; i++) {
+            int num = i * n;
+            while (num != 0) {
+                int r = num % 10;
+                boolean seen = false;
+                for (int j = 0; j < arr.length; j++) {
+                    if ( arr[j] == r) {
+                        seen = true;
+                        break;
+                    }
+                }
+
+                if (!seen) {
+                    arr[k] = r;
+                    k++;
+                }
+                num = num / 10;
+            }
+            count++;
+        }
+        return count;
+    }
+
+    public static int matches(int[] a, int[] p){
+        int prev = 0;
+        for (int i = 0; i < p.length; i++) {
+            int element = p[i];
+            int k = prev;
+            if (element > 0) {
+                for (int j = prev; j < prev+element; j++) {
+                    if (a[k] < 0) return 0;
+                    k++;
+                }
+            } else {
+                for (int j = prev; j < prev+Math.abs(element); j++) {
+                    if (a[k] > 0) return 0;
+                    k++;
+                }
+            }
+            prev += Math.abs(element);
+        }
+        return 1;
+    }
 }

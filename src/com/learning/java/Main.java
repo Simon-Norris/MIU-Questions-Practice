@@ -35,6 +35,13 @@ public class Main
         int base1 = 2;
         int[] a8 = {1,0,1,1};
         System.out.println("The result after converted base to 10 is: "+Solution11.convertToBase10(a8, base1));
+
+        int num= 25;
+        System.out.println("The computed depth is: "+Solution11.computeDepth(num));
+
+        int[] a9 = {1, 2, 3, -5, -5, 2, 3, 18};
+        int[] p9 = {3, -2, 3};
+        System.out.println("Does the array matches ? "+Solution11.matches(a9, p9));
     }
 }
 
