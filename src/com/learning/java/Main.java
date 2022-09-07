@@ -14,6 +14,12 @@ public class Main
 
         int[] arr3 = {1};
         System.out.println("Is array vanilla ? "+Solution12.isVanilla(arr3));
+
+        long n4 = 21;
+        System.out.println("Is num isolated ? "+Solution12.isIsolated(n4));
+
+        int[] a5 = {-1, 1, 1, 0} ;
+        System.out.println("Is trivalent array ? "+Solution12.isTriValent(a5));
     }
 }
 

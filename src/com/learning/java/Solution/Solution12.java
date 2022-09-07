@@ -40,4 +40,52 @@ public class Solution12 {
         }
         return 1;
     }
+
+    public static int isIsolated(long n) {
+        long validator = 2097151;
+        if ( n < 1 || n > validator) return -1;
+        long square = n*n;
+        long cube = n*n*n;
+
+        while (cube != 0) {
+            long rem = cube % 10;
+            long num = square;
+            while (num != 0) {
+                long sqRem = num % 10;
+                if (rem == sqRem) return 0;
+                num /= 10;
+            }
+            cube /= 10;
+        }
+        return 1;
+    }
+
+    public static int isTriValent(int[] a) {
+        if ( a == null || a.length < 3) return 0;
+
+        int first = a[0];
+        int sec = first;
+        int third = first;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] != first) sec = a[i];break;
+        }
+        if (first == sec) return 0;
+        for (int i = 2; i < a.length; i++) {
+            if (a[i] != first) {
+                if (a[i] != sec) {
+                    third = a[i];
+                    break;
+                }
+            }
+        }
+        if (first == third || sec == third) return 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != first ){
+                if ( a[i] != sec) {
+                    if ( a[i] != third) return 0;
+                }
+            }
+        }
+        return 1;
+    }
 }
