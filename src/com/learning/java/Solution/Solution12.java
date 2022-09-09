@@ -88,4 +88,58 @@ public class Solution12 {
         }
         return 1;
     }
+
+    public static int countRepresentations(int numRupees) {
+        int count = 0;
+        for (int rupee20 = 0; rupee20 <= numRupees; rupee20++) {
+            for (int rupee10 = 0; rupee10 <= numRupees; rupee10++) {
+                for (int rupee5 = 0; rupee5 <= numRupees; rupee5++) {
+                    for (int rupee2 = 0; rupee2 <= numRupees; rupee2++) {
+                        for (int rupee1 = 0; rupee1 <= numRupees ; rupee1++) {
+                            if (rupee1 + 2*rupee2 + 5*rupee5 + 10*rupee10 + 20*rupee20 == numRupees){
+                                count++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+    public static int sequentiallyBounded(int[] a) {
+        for (int i = 0; i < a.length-1; i++) {
+            int num = a[i];
+            if (num > a[i+1]) return 0;
+            int countNum = 0;
+            for (int j = 0; j < a.length; j++) {
+               if (a[j] == num) countNum++;
+            }
+            if( countNum >= num) return 0;
+        }
+        return 1;
+    }
+
+    public static int minMaxDisjoint(int[] a) {
+        if (a == null || a.length <= 1) return 0;
+
+        int max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > max) max = a[i];
+            else if (a[i] == max) return 0;
+        }
+
+        int min = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] < min) min = a[i];
+            else if (a[i] == min) return 0;
+        }
+
+        if (max == min) return 0;
+
+        for (int i = 0; i < a.length-1; i++) {
+            if ((a[i] == max && a[i+1] == min) || (a[i] == min && a[i+1] == max)) return 0;
+        }
+        return 1;
+    }
 }

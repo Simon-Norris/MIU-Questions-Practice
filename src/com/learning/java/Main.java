@@ -20,6 +20,15 @@ public class Main
 
         int[] a5 = {-1, 1, 1, 0} ;
         System.out.println("Is trivalent array ? "+Solution12.isTriValent(a5));
+
+        int n6 = 12;
+        System.out.println("The number of ways given rupee can be representated is: "+Solution12.countRepresentations(n6));
+
+        int[] a7 = {2, 3, 3, 99, 99, 99, 99, 99} ;
+        System.out.println("Is array sequentially bounded ? "+Solution12.sequentiallyBounded(a7));
+
+        int[] a8 = {18, 3, 4, 0, 1} ;
+        System.out.println("Is array min max  jointed ? "+Solution12.minMaxDisjoint(a8));
     }
 }
 
