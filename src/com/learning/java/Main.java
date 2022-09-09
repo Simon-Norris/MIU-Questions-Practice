@@ -29,6 +29,19 @@ public class Main
 
         int[] a8 = {18, 3, 4, 0, 1} ;
         System.out.println("Is array min max  jointed ? "+Solution12.minMaxDisjoint(a8));
+
+        int n9 = 124;
+        System.out.println("The count of smallest is: "+Solution12.smallest(n9));
+
+        int[] arr10 = {2, 1, 2, 1, 5, 1, 1, 1, 1, 1, 1, 2}  ;
+        int[] res10 = Solution12.clusterCompression(arr10);
+        if (res10 == null || res10.length == 0) System.out.println("null | empty");
+        else {
+            System.out.println("The cluster compression arr is");
+            for (int j : res10) {
+                System.out.print(j+ " ");
+            }
+        }
     }
 }
 

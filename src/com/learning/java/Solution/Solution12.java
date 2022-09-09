@@ -142,4 +142,45 @@ public class Solution12 {
         }
         return 1;
     }
+
+    public static int smallest(int n){
+        int count = 0;
+
+        for (int i = 1;; i++) {
+            int num = n*i;
+            boolean has2 = false;
+            while (num != 0) {
+                int r = num % 10;
+                if (r == 2) {
+                    has2 = true;
+                    break;
+                }
+                num /= 10;
+            }
+
+            if (has2) count++;
+            else break;
+        }
+        return count;
+    }
+
+    public static int[] clusterCompression(int[] a) {
+        if (a == null) return null;
+        else if (a .length <= 1) return a;
+
+        int count = 1;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i-1] != a[i]) count++;
+        }
+        int[] arr = new int[count];
+        arr[0] = a[0];
+        int k = 1;
+        for (int i = 1; i < a.length; i++) {
+            if (a[i-1] != a[i]) {
+                arr[k] = a[i];
+                k++;
+            }
+        }
+        return arr;
+    }
 }
