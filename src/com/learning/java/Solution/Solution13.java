@@ -142,4 +142,24 @@ public class Solution13 {
 
         return result;
     }
+
+    public static int checkConcatenatedSum(int n, int catLen){
+        int sum = 0, num = n;
+        while (n != 0) {
+            int rem = n % 10;
+            sum += concat(rem, catLen);
+            n = n / 10;
+        }
+        if (sum == num) return 1;
+        return 0;
+    }
+
+    private static int concat(int num, int len) {
+        int multiple = 1, result = 0;
+        for (int i = 0; i < len; i++) {
+            result += multiple * num;
+            multiple *= 10;
+        }
+        return result;
+    }
 }

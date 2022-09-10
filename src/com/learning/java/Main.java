@@ -32,6 +32,10 @@ public class Main
                 System.out.print(re + " ");
             }
         }
+
+        int n7 = 13332;
+        int catLength = 5;
+        System.out.println("Is it concatenated Sum ? "+Solution13.checkConcatenatedSum(n7, catLength));
     }
 }
 
