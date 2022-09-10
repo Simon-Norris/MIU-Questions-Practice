@@ -115,4 +115,31 @@ public class Solution13 {
         }
         return result;
     }
+
+    public static int[] filterArray(int[] a, int n) {
+        if (a == null) return null;
+        else if (a.length == 0 || n <= 0) return new int[]{};
+
+        int count1 = 0;
+        int num = n;
+        int j=0;
+        while (num != 0) {
+            if ( num % 2 == 1) count1++;
+            j++;
+            num = num / 2;
+        }
+
+        if (a.length < j) return null;
+
+        int[] result = new int[count1];
+        int k = 0;
+        int i=0;
+        while (n != 0) {
+            if ( n % 2 == 1) result[k++] = a[i];
+            i++;
+            n=n/2;
+        }
+
+        return result;
+    }
 }

@@ -21,6 +21,17 @@ public class Main
         int n = 128;
         int p = 4;
         System.out.println("The largest exponent is: "+Solution13.getExponent(n, p));
+
+        int[] arr6 =  {9,-9};
+        int n6 = 5;
+        int[] res = Solution13.filterArray(arr6, n6);
+        if (res == null || res.length == 0) System.out.println("NULL || EMPTY");
+        else {
+            System.out.println("The filtered array is");
+            for (int re : res) {
+                System.out.print(re + " ");
+            }
+        }
     }
 }
 
