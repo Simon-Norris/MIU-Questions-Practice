@@ -31,4 +31,65 @@ public class Solution13 {
         }
         return 1;
     }
+
+    public static int fullnessQuotient(int n) {
+        if ( n < 1) return -1;
+        int count = 0;
+        for (int i = 2; i <= 9; i++) {
+            int num = n;
+            boolean zeroFound = false;
+            while (num != 0) {
+                int rem = num % i;
+                if (rem == 0) {
+                    zeroFound = true;
+                    break;
+                }
+                num = num / i;
+            }
+            if (!zeroFound) count++;
+        }
+        return count;
+    }
+
+    public static int isPacked(int[] a) {
+        int  i =0;
+        while (i < a.length) {
+            if (a[i] < 0) return 0;
+            int k = i;
+            int count = 1;
+            while (k+1 < a.length && a[k] == a[k+1]) {
+                count++;
+                k++;
+            }
+            if (a[i] != count) return 0;
+            i =k+1;
+        }
+        return 1;
+    }
+
+    public static int isOddHeavy(int[] a) {
+        if (a == null || a.length == 0) return 0;
+
+        boolean hasOdd = false;
+
+        for (int i = 0; i < a.length; i++) {
+           if (a[i] % 2 != 0) {
+               hasOdd = true;
+               break;
+           }
+        }
+        if (!hasOdd) return 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) {
+                for (int j = 0; j < a.length; j++) {
+                    if (a[j] % 2 == 0) {
+                        if (a[j] > a[i]) return 0;
+                    }
+                }
+            }
+        }
+
+        return 1;
+    }
 }
