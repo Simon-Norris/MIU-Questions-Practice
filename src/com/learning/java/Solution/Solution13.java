@@ -92,4 +92,27 @@ public class Solution13 {
 
         return 1;
     }
+
+    public static int getExponent(int n, int p) {
+        if ( p <= 1) return -1;
+        int large = 0;
+        for (int i = 0;  ; i++) {
+            int res = power(p,i);
+            if (n % res == 0) {
+                large = i;
+            }
+            if (res > Math.abs(n)) break;
+        }
+        return large;
+    }
+
+    private static int power(int base, int exp) {
+        if (exp == 0) return 1;
+
+        int result = 1;
+        for (int i = 1; i <= exp; i++) {
+            result = result * base;
+        }
+        return result;
+    }
 }

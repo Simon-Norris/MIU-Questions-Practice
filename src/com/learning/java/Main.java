@@ -17,6 +17,10 @@ public class Main
 
         int[] arr4 ={2,5,3};
         System.out.println("Is Odd Heavy: "+Solution13.isOddHeavy(arr4));
+
+        int n = 128;
+        int p = 4;
+        System.out.println("The largest exponent is: "+Solution13.getExponent(n, p));
     }
 }
 
