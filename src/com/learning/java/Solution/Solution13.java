@@ -183,4 +183,73 @@ public class Solution13 {
         }
         return 1;
     }
+
+    private static int isPrime (int num) {
+        if ( num <= 1) return 0;
+        int flag = 1;
+        for (int i = 2; i <= num/2; i++) {
+            if (num % i == 0) {
+                flag = 0;
+                break;
+            }
+        }
+        return flag;
+    }
+    public static int largestPrimeFactor (int n) {
+        if ( n <= 1) return 0;
+        int largest = 1;
+        for (int i = 2; i <= n/2; i++) {
+            if ( n % i == 0) {
+                if (isPrime(i) == 1) largest = i;
+            }
+        }
+        return largest;
+    }
+
+    public static int[] encodeNumber(int n) {
+        if ( n <= 1) return null;
+
+        int count = 0;
+        int num = n;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0 && isPrime(i) == 1) {
+                while (num % i == 0) {
+                    count++;
+                    num = num / i;
+                }
+            }
+        }
+
+        int[] arr = new int[count];
+        count = 0;
+        num = n;
+        for (int i = 1; i <= num ; i++) {
+            if (num % i == 0 && isPrime(i) == 1)
+                while (num % i == 0) {
+                    arr[count++] = i;
+                    num = num / i;
+                }
+        }
+        return arr;
+    }
+
+    public static int matchPattern(int[] a, int len, int[] pattern, int patternLen) {
+        int i = 0, k = 0, matches = 0;
+        for (i = 0; i < len; i++) {
+            if (a[i] == pattern[k]) {
+                matches++;
+            } else if (matches == 0 || k == patternLen - 1) {
+                return 0;
+            } else {
+                k++;
+                if (a[i] == pattern[k]) matches++;
+                else return 0;
+            }
+        }
+        if (i == len && k == patternLen - 1) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

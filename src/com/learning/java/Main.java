@@ -41,6 +41,23 @@ public class Main
         int m8 = 1;
         int n8 = 5;
         System.out.println("Is sequenced array ?"+Solution13.isSequencedArray(arr8,m8,n8));
+
+        int n9 = 6937;
+        System.out.println("The largest prime factor is: "+Solution13.largestPrimeFactor(n9));
+
+        int n10 = 42;
+        int[] response10 = Solution13.encodeNumber(n10);
+        System.out.println("The encode numbers are: ");
+        if (response10 == null || response10.length == 0) System.out.println("NULL || EMPTY");
+        else {
+            for (int i = 0; i < response10.length; i++) {
+                System.out.print(response10[i]+ " ");
+            }
+        }
+
+        int[] arr10 ={1, 1, 1, 1, 2, 2, 3, 3,4} ;
+        int[] pattern = {1, 2, 3,5,6};
+        System.out.println("\nDoes the pattern matches ? "+Solution13.matchPattern(arr10,arr10.length, pattern, pattern.length));
     }
 }
 
