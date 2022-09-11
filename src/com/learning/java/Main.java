@@ -26,6 +26,9 @@ public class Main
 
         int[] a2 = {1, 1};
         System.out.println("THe decoded number from array is: "+Solution14.decodeArray(a2));
+
+        int[] a3 = {} ;
+        System.out.println("Is array Zero plentiful ?: "+Solution14.isZeroPlentiful(a3));
     }
 }
 

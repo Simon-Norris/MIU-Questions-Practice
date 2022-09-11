@@ -38,4 +38,26 @@ public class Solution14 {
         if (a[0] < 0) return -result;
         return result;
     }
+
+    public static int isZeroPlentiful(int[] a) {
+        if (a == null || a.length == 0) return 0;
+
+        int i = 0, found = 0;
+        while (i < a.length) {
+            if (a[i] == 0) {
+                int j = i;
+                int count = 0;
+                while (j < a.length && a[j] == 0) {
+                    count++;
+                    j++;
+                }
+                if (count < 4) return 0;
+                i = j; found++;
+            } else {
+                i++;
+            }
+        }
+
+        return found;
+    }
 }
