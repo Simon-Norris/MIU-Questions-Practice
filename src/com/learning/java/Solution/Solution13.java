@@ -162,4 +162,25 @@ public class Solution13 {
         }
         return result;
     }
+
+    public static int isSequencedArray (int[] a, int m, int n) {
+        if ( a == null || a.length == 0 || (m == 0 && n== 0) || n < m) return 0;
+        int count = 1;
+        int prev = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] == prev) continue;
+            else {
+                if (a[i] < prev) return 0;
+                a[count] = a[i];
+                prev = a[count];
+                count++;
+            }
+        }
+        count = 0;
+        for (int i = m; i <= n ; i++) {
+           if (count >= a.length || i != a[count]) return 0;
+           count++;
+        }
+        return 1;
+    }
 }

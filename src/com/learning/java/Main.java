@@ -36,6 +36,11 @@ public class Main
         int n7 = 13332;
         int catLength = 5;
         System.out.println("Is it concatenated Sum ? "+Solution13.checkConcatenatedSum(n7, catLength));
+
+        int[] arr8 = {1,2,3,4,5};
+        int m8 = 1;
+        int n8 = 5;
+        System.out.println("Is sequenced array ?"+Solution13.isSequencedArray(arr8,m8,n8));
     }
 }
 
