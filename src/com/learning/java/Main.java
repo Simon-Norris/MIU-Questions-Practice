@@ -32,6 +32,12 @@ public class Main
 
         int[] a4 = {2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("Is 235Array ? "+Solution14.is235Array(a4));
+
+        int n5 = 4;
+        System.out.println("Is triangular ?: "+Solution14.isTriangular(n5));
+
+        int[] a6= {2,3,3,4,4,4,4,4,3,1} ;
+        System.out.println("Is mercurial array ? "+Solution14.isMercurial(a6));
     }
 }
 

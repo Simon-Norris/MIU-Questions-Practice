@@ -81,4 +81,46 @@ public class Solution14 {
         if (by2+by3+by5+byNone == a.length) return 1;
         return 0;
     }
+
+    public static int isTriangular(int n) {
+        int sum = 0;
+        for (int i = 1; ; i++) {
+            sum += i;
+            if (sum == n) return 1;
+            if (sum > n) break;
+        }
+        return 0;
+    }
+
+    public static int isMercurial(int[] a) {
+        int i =0;
+        boolean firstOne = false, mid3 = false, lastOne = false;
+        while (i < a.length) {
+            if (a[i] == 1) {
+                firstOne = true;
+                break;
+            }
+            i++;
+        }
+        if (!firstOne) return 1;
+
+        while (i+1 < a.length) {
+            if (a[i] == 3) {
+                mid3 = true;
+                break;
+            }
+            i++;
+        }
+        if (!mid3) return 1;
+
+        while (i+1 < a.length){
+            if (a[i+1] == 1) {
+                lastOne = true;
+                break;
+            }
+            i++;
+        }
+        if (lastOne) return 0;
+        return 1;
+    }
 }
