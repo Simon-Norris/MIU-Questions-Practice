@@ -60,4 +60,25 @@ public class Solution14 {
 
         return found;
     }
+
+    public static int is235Array(int[] a) {
+        int by2 = 0, by3 =0, by5 = 0, byNone = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                by2++;
+                if (a[i] % 3 == 0) by3++;
+                if (a[i] % 5 == 0) by5++;
+            } else if (a[i] % 3 == 0) {
+                by3++;
+                if (a[i] % 2 == 0) by2++;
+                if (a[i] % 5 == 0) by5++;
+            } else if (a[i] % 5 == 0) {
+                by5++;
+                if (a[i] % 2 == 0) by2++;
+                if (a[i] % 3 == 0) by3++;
+            } else byNone++;
+        }
+        if (by2+by3+by5+byNone == a.length) return 1;
+        return 0;
+    }
 }
