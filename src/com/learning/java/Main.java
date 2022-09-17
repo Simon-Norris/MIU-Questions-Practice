@@ -38,6 +38,15 @@ public class Main
 
         int[] a6= {2,3,3,4,4,4,4,4,3,1} ;
         System.out.println("Is mercurial array ? "+Solution14.isMercurial(a6));
+
+        int n7 = 13;
+        System.out.println("Is Fibonacci Number ? "+Solution14.isFibonacci(n7));
+
+        int n8 = 125;
+        System.out.println("Is vesuvian number ? "+Solution14.isVesuvian(n8));
+
+        int[] arr9 = {1,1,4,5,4,4,1,1};
+        System.out.println("Is oneBalanced array ? "+Solution14.isOneBalanced(arr9));
     }
 }
 

@@ -1,5 +1,7 @@
 package com.learning.java.Solution;
 
+import static com.learning.java.Solution.Solution9.isSquare;
+
 public class Solution14 {
 
     public static void doIntegerBasedRounding(int[] a, int n) {
@@ -122,5 +124,66 @@ public class Solution14 {
         }
         if (lastOne) return 0;
         return 1;
+    }
+
+    public static int isFibonacci (int n) {
+        if ( n <= 0) return 0;
+        if (n == 1) return 1;
+        int prev = 1;
+        int current = 1;
+        for (int i = 0; ; i++) {
+            int sum = prev + current;
+            if (sum == n) return 1;
+            if (sum > n) break;
+            prev = current;
+            current = sum;
+        }
+        return 0;
+    }
+
+    public static int isVesuvian(int n) {
+
+        int count = 0;
+        int first = 1;
+        int second = n-1;
+        while (first <= second){
+            if (isSquare(first) == 1 && isSquare(second) == 1) {
+                count++;
+                if (count > 1) return 1;
+            }
+            first++;
+            second--;
+        }
+        return 0;
+    }
+
+
+    public static int isOneBalanced(int[] a) {
+        int begin1 = 0, end1= 0, nonZero = 0;
+        int i=0;
+        while (i < a.length) {
+            if (a[i] == 1) {
+                begin1++;
+                i++;
+            } else break;
+        }
+        while (i < a.length) {
+            if (a[i] != 1) {
+                nonZero++;
+                i++;
+            } else break;
+        }
+        while (i < a.length) {
+            if (a[i] == 1) {
+                end1++;
+                i++;
+                for (int j = i; j < a.length; j++) {
+                    if (a[j] != 1) return 0;
+                }
+            } else break;
+        }
+
+        if (begin1 + end1 == nonZero) return 1;
+        return 0;
     }
 }
