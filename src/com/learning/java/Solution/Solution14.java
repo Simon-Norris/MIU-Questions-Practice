@@ -276,4 +276,55 @@ public class Solution14 {
         }
         return 1;
     }
+
+    public static int largestDifferenceOfEvens(int[ ] a){
+        if ( a == null || a.length == 0) return -1;
+        int countEvens  = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) countEvens++;
+        }
+        if (countEvens < 2) return -1;
+
+        int j = 0;
+        int minEven = 0;
+        int maxEven = 0;
+        while (j < a.length) {
+            if (a[j] % 2 == 0){
+                minEven = a[j];
+                maxEven = a[j];
+                break;
+            }
+            j++;
+        }
+        for (int i = 0; i < a.length; i++) {
+            if ( a[i] % 2  == 0) {
+                if (a[i] < minEven) {
+                    minEven = a[i];
+                }
+                if (a[i] > maxEven) {
+                    maxEven = a[i];
+                }
+            }
+        }
+        return maxEven - minEven;
+    }
+
+    public static int isFactorialPrime(int n){
+        if ( n < 1) return 0;
+        if ( isPrime(n) == 1 ){
+            for (int i = 1; i < n ; i++) {
+                int calc = factorial(i) + 1;
+                if (calc == n) return 1;
+                if (calc > n) break;
+            }
+        }
+        return 0;
+    }
+
+    private static int factorial(int n) {
+        if ( n == 1) {
+            return 1;
+        }
+        return n * factorial(n-1);
+    }
 }

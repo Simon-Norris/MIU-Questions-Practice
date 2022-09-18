@@ -57,6 +57,12 @@ public class Main
 
         int n12 = 127;
         System.out.println("Is this number hodder ? "+Solution14.isHodder(n12));
+
+        int[] a13 = {-2, 3, 4, 9};
+        System.out.println("The largest difference between evens is: "+Solution14.largestDifferenceOfEvens(a13));
+
+        int n14 = 13;
+        System.out.println("Is prime factorial ? "+Solution14.isFactorialPrime(n14));
     }
 }
 
