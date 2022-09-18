@@ -47,6 +47,16 @@ public class Main
 
         int[] arr9 = {1,1,4,5,4,4,1,1};
         System.out.println("Is oneBalanced array ? "+Solution14.isOneBalanced(arr9));
+
+        int n10 = 12;
+        System.out.println("The closest fibonacci number is : " +Solution14.closestFibonacciNumber(n10));
+
+        char[] ch1 = {'b', 'o', 'g'};
+        char[] ch2 = {'b', 'o', 'm'};
+        System.out.println("Are these char arrays anagrams ? "+Solution14.areAnagrams(ch1, ch2));
+
+        int n12 = 127;
+        System.out.println("Is this number hodder ? "+Solution14.isHodder(n12));
     }
 }
 

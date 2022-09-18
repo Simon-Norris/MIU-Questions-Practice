@@ -157,7 +157,6 @@ public class Solution14 {
         return 0;
     }
 
-
     public static int isOneBalanced(int[] a) {
         int begin1 = 0, end1= 0, nonZero = 0;
         int i=0;
@@ -185,5 +184,96 @@ public class Solution14 {
 
         if (begin1 + end1 == nonZero) return 1;
         return 0;
+    }
+
+    public static int closestFibonacciNumber(int n) {
+        if ( n < 1) return 0;
+        int prev = 1;
+        int current = 1;
+        for (int i = 0; i < n; i++) {
+            int sum = prev + current;
+            prev = current;
+            current = sum;
+            if (sum >= n) break;
+        }
+       if (current == n) return current;
+       else return prev;
+    }
+
+    public static int areAnagrams(char [ ] a1, char [ ] a2){
+
+        int[] count1 = new int[a1.length];
+        for (int i = 0; i < a1.length; i++) {
+            char ch = a1[i];
+            int j = 0;
+            int countCharacter = 0;
+            while (j < a1.length) {
+                if (a1[j] == ch) countCharacter++;
+                j++;
+            }
+            count1[i] = countCharacter;
+        }
+
+        int[] count2 = new int[a2.length];
+        for (int i = 0; i < a2.length; i++) {
+            char ch = a2[i];
+            int j = 0;
+            int countCharacter = 0;
+            while (j < a2.length) {
+                if (a2[j] == ch) countCharacter++;
+                j++;
+            }
+            count2[i] = countCharacter;
+        }
+        for (int i = 0; i < a1.length; i++) {
+            char ch = a1[i];
+            int chCount = count1[i];
+            int chFound = 0;
+            for (int j = 0; j < a2.length; j++) {
+                char ch2 = a2[j];
+                int chCount2 = count2[j];
+                if (ch == ch2) {
+                    chFound = 1;
+                    if (chCount != chCount2) return 0;
+                    else break;
+                }
+            }
+            if (chFound == 0) return 0;
+        }
+        return 1;
+    }
+
+    public static int isHodder(int n) {
+        if ( n <= 1) return 0;
+        if (isPrime(n) == 1) {
+            int i =0;
+            int calc = power(2, i) - 1;
+            while (calc <= n) {
+                calc = power(2, i) - 1;
+                if (calc == n) return 1;
+                i++;
+            }
+        }
+        return 0;
+    }
+
+    private static int power(int base, int exp) {
+        if (exp == 0) return 1;
+        int result = 1;
+        while (exp != 0) {
+            result = result * base;
+            exp--;
+        }
+        return result;
+    }
+
+    private static int isPrime(int n) {
+        if ( n <= 1) return 0;
+        for (int i = 2; i <= n/2; i++) {
+            if (n % i == 0) {
+                return 0;
+            }
+        }
+        return 1;
     }
 }
