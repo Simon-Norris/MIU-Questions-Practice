@@ -327,4 +327,18 @@ public class Solution14 {
         }
         return n * factorial(n-1);
     }
+
+    public static int systematicallyIncreasing(int[] a) {
+        if (a == null || a.length == 0) return 0;
+        for (int i = 1; i <= a[a.length-1]; i++) {
+            int m = 0;
+            for (int j = 1; j <= i; j++) {
+                for (int k = 1; k <= j; k++) {
+                    if (a[m] != k) return 0;
+                    m++;
+                }
+            }
+        }
+        return 1;
+    }
 }

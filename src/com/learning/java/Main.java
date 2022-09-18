@@ -63,6 +63,9 @@ public class Main
 
         int n14 = 13;
         System.out.println("Is prime factorial ? "+Solution14.isFactorialPrime(n14));
+
+        int[] arr15 = {1, 1, 2, 1, 2, 3};
+        System.out.println("Is this systematically increasing array ? "+ Solution14.systematicallyIncreasing(arr15));
     }
 }
 
