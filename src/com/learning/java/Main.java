@@ -79,6 +79,9 @@ public class Main
 
         int[] arr18 = {-2, 5, 0, 5, 12};
         System.out.println("Is onion array ? "+Solution14.isOnionArray(arr18));
+
+        int[] n19 = {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1};
+        System.out.println("THe decoded number is: "+Solution14.decodeArrayAnother(n19));
     }
 }
 

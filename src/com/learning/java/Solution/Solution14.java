@@ -401,4 +401,20 @@ public class Solution14 {
         }
         return 1;
     }
+
+    public static int decodeArrayAnother(int[] a){
+        int multiplier = 1, digit = 0;
+        for (int i = a.length-2; i >= 0;) {
+            int numZero = 0, j = i;
+            while ( j >= 0 && a[j] == 0) {
+                numZero++;
+                j--;
+            }
+            digit += multiplier * numZero;
+            multiplier *= 10;
+            i = j;
+            i--;
+        }
+        return (a[0] < 0) ? -digit : digit;
+    }
 }
