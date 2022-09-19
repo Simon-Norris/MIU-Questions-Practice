@@ -66,6 +66,13 @@ public class Main
 
         int[] arr15 = {1, 1, 2, 1, 2, 3};
         System.out.println("Is this systematically increasing array ? "+ Solution14.systematicallyIncreasing(arr15));
+
+        int n16 = 563;
+        int[] res16 = Solution14.encodeArray(n16);
+        System.out.println("The encoded array is: ");
+        for (int i = 0; i < res16.length; i++) {
+            System.out.print(res16[i]+" ");
+        }
     }
 }
 

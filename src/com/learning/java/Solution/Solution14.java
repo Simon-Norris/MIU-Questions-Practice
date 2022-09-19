@@ -341,4 +341,39 @@ public class Solution14 {
         }
         return 1;
     }
+
+    public static int[] encodeArray(int n) {
+        if ( n == 0) return new int[]{1};
+        int digit = n;
+        if (digit < 0) {
+            digit = Math.abs(digit);
+        }
+        int count = 0;
+        while (digit != 0) {
+            int r = digit % 10;
+            count += r + 1;
+            digit = digit / 10;
+        }
+        digit = n;
+        int[] a;
+        if (digit < 0){
+            a = new int[count+1];
+            a[0] = -1;
+            digit = Math.abs(digit);
+        } else {
+            a = new int[count];
+        }
+        int k = a.length - 1;
+        while (digit != 0) {
+            int r = digit % 10;
+            a[k] = 1;
+            k--;
+            while (r != 0) {
+                a[k--] = 0;
+                r--;
+            }
+            digit = digit / 10;
+        }
+        return a;
+    }
 }
