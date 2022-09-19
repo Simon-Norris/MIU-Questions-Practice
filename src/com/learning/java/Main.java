@@ -73,6 +73,12 @@ public class Main
         for (int i = 0; i < res16.length; i++) {
             System.out.print(res16[i]+" ");
         }
+
+        int n17 = 10;
+        System.out.println("\nIs prime happy: "+Solution14.isPrimeHappy(n17));
+
+        int[] arr18 = {-2, 5, 0, 5, 12};
+        System.out.println("Is onion array ? "+Solution14.isOnionArray(arr18));
     }
 }
 

@@ -376,4 +376,29 @@ public class Solution14 {
         }
         return a;
     }
+
+    public static int isPrimeHappy(int n){
+        if ( n < 2) return 0;
+        int sumOfAllPrime = 0;
+        int flag = 0;
+        for (int i = 1; i < n; i++) {
+            if (isPrime(i) == 1) {
+                flag = 1;
+                sumOfAllPrime += i;
+            }
+        }
+        if (flag == 0 || sumOfAllPrime % n != 0) return 0;
+        return 1;
+    }
+
+    public static int isOnionArray(int[] a){
+
+        int j = 0, k = a.length -1;
+
+        while (j < k) {
+            if (a[j] + a[k] > 10) return 0;
+            j++;k--;
+        }
+        return 1;
+    }
 }
