@@ -417,4 +417,36 @@ public class Solution14 {
         }
         return (a[0] < 0) ? -digit : digit;
     }
+
+    public static int isDigitIncreasing(int n) {
+        int digit = 0;
+        for (int i = n; i >= 0 ; i--) {
+            int num = i;
+            boolean allSameDigits = false;
+            int prev = num % 10;
+            while (num  != 0) {
+                if (num % 10 == prev) {
+                    allSameDigits = true;
+                } else {
+                    allSameDigits = false;
+                    break;
+                }
+                num = num / 10;
+            }
+            if (allSameDigits) {
+                digit = i % 10;
+                break;
+            }
+        }
+
+        int total = 0, multiplier = 1, prev = 0;
+        while(total <= n) {
+            int sum = digit * multiplier + prev;
+            total += sum;
+            if (total == n) return 1;
+            prev = sum;
+            multiplier *= 10;
+        }
+        return 0;
+    }
 }

@@ -82,6 +82,15 @@ public class Main
 
         int[] n19 = {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1};
         System.out.println("THe decoded number is: "+Solution14.decodeArrayAnother(n19));
+
+        int n20 = 24;
+        System.out.println("Is digit increasing ? "+Solution14.isDigitIncreasing(n20));
+
+        for (int i = 0; i < 10000; i++) {
+            if (Solution14.isDigitIncreasing(i) == 1) {
+                System.out.print(i+ " ");
+            }
+        }
     }
 }
 
