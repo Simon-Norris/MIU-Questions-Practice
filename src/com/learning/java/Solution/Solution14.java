@@ -477,4 +477,45 @@ public class Solution14 {
         if (sum == 0) return 1;
         return 0;
     }
+
+    public static int isCentered15(int[] a){
+        if (a == null || a.length == 0) return 0;
+
+        int i=0, begin = 0, sum = 0, proceed = 0, follow = 0;
+
+        while (i < a.length) {
+            sum += a[i];
+            if (sum == 15) {
+                int j = 0;
+                while (j < begin) {
+                    proceed++;
+                    j++;
+                }
+                j = i + 1;
+                while (j < a.length) {
+                    follow++;
+                    j++;
+                }
+
+                if (proceed == follow) return 1;
+                else {
+                    sum = 0;
+                    proceed = 0;
+                    follow = 0;
+                    begin++;
+                    i = begin;
+                    continue;
+                }
+            } else if (sum > 15) {
+                sum = 0;
+                proceed = 0;
+                follow = 0;
+                begin++;
+                i = begin;
+                continue;
+            }
+            i++;
+        }
+        return 0;
+    }
 }

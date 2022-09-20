@@ -88,6 +88,9 @@ public class Main
 
         int[] arr21 ={3, 1, 2, 3, 0} ;
         System.out.println("Is Madhav Array ? "+Solution14.isMadhavArray(arr21));
+
+        int[] arr22 ={15} ;
+        System.out.println("Is an array centered 15 ? "+Solution14.isCentered15(arr22));
     }
 }
 
