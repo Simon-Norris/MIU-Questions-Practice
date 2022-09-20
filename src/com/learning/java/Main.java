@@ -86,11 +86,8 @@ public class Main
         int n20 = 24;
         System.out.println("Is digit increasing ? "+Solution14.isDigitIncreasing(n20));
 
-        for (int i = 0; i < 10000; i++) {
-            if (Solution14.isDigitIncreasing(i) == 1) {
-                System.out.print(i+ " ");
-            }
-        }
+        int[] arr21 ={3, 1, 2, 3, 0} ;
+        System.out.println("Is Madhav Array ? "+Solution14.isMadhavArray(arr21));
     }
 }
 

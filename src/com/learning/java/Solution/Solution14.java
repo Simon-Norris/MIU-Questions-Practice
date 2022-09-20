@@ -449,4 +449,32 @@ public class Solution14 {
         }
         return 0;
     }
+
+    public static int isMadhavArray(int[] a) {
+        if (a == null) return 0;
+
+        boolean flag = false;
+        for (int i = 0; i < a.length; i++) {
+            int calc = a[i]*(a[i] + 1)/2;
+            if (calc == a.length) {
+                flag = true;
+                break;
+            }
+        }
+        if (!flag) return 0;
+
+        int firstDigit = a[0];
+        int i = 1;
+        int sum = 0;
+        while (i < a.length) {
+            sum += a[i];
+            if (sum == firstDigit) {
+                sum = 0;
+            }
+            i++;
+        }
+
+        if (sum == 0) return 1;
+        return 0;
+    }
 }
