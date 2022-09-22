@@ -91,6 +91,10 @@ public class Main
 
         int[] arr22 ={15} ;
         System.out.println("Is an array centered 15 ? "+Solution14.isCentered15(arr22));
+
+        int[] arr23 ={1, 1, 0 , 1, 0,-1};
+        int n23 = 3;
+        System.out.println("Has N Values? "+Solution14.hasNValues(arr23, n23));
     }
 }
 

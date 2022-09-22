@@ -518,4 +518,31 @@ public class Solution14 {
         }
         return 0;
     }
+
+    public static int hasNValues(int[] a, int n) {
+        int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.MAX_VALUE;
+        }
+        int k = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            int num = a[i];
+            boolean found = false;
+            for (int j = 0; j < arr.length; j++) {
+                if (num == arr[j]) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                if (k < arr.length) {
+                    arr[k] = num;
+                    k++;
+                } else return 0;
+            }
+        }
+        if (k == n) return 1;
+        return 0;
+    }
 }
