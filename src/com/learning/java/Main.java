@@ -29,6 +29,72 @@ public class Main
 
         int[] a3 = {} ;
         System.out.println("Is array Zero plentiful ?: "+Solution14.isZeroPlentiful(a3));
+
+        int[] a4 = {2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("Is 235Array ? "+Solution14.is235Array(a4));
+
+        int n5 = 4;
+        System.out.println("Is triangular ?: "+Solution14.isTriangular(n5));
+
+        int[] a6= {2,3,3,4,4,4,4,4,3,1} ;
+        System.out.println("Is mercurial array ? "+Solution14.isMercurial(a6));
+
+        int n7 = 13;
+        System.out.println("Is Fibonacci Number ? "+Solution14.isFibonacci(n7));
+
+        int n8 = 125;
+        System.out.println("Is vesuvian number ? "+Solution14.isVesuvian(n8));
+
+        int[] arr9 = {1,1,4,5,4,4,1,1};
+        System.out.println("Is oneBalanced array ? "+Solution14.isOneBalanced(arr9));
+
+        int n10 = 12;
+        System.out.println("The closest fibonacci number is : " +Solution14.closestFibonacciNumber(n10));
+
+        char[] ch1 = {'b', 'o', 'g'};
+        char[] ch2 = {'b', 'o', 'm'};
+        System.out.println("Are these char arrays anagrams ? "+Solution14.areAnagrams(ch1, ch2));
+
+        int n12 = 127;
+        System.out.println("Is this number hodder ? "+Solution14.isHodder(n12));
+
+        int[] a13 = {-2, 3, 4, 9};
+        System.out.println("The largest difference between evens is: "+Solution14.largestDifferenceOfEvens(a13));
+
+        int n14 = 13;
+        System.out.println("Is prime factorial ? "+Solution14.isFactorialPrime(n14));
+
+        int[] arr15 = {1, 1, 2, 1, 2, 3};
+        System.out.println("Is this systematically increasing array ? "+ Solution14.systematicallyIncreasing(arr15));
+
+        int n16 = 563;
+        int[] res16 = Solution14.encodeArray(n16);
+        System.out.println("The encoded array is: ");
+        for (int i = 0; i < res16.length; i++) {
+            System.out.print(res16[i]+" ");
+        }
+
+        int n17 = 10;
+        System.out.println("\nIs prime happy: "+Solution14.isPrimeHappy(n17));
+
+        int[] arr18 = {-2, 5, 0, 5, 12};
+        System.out.println("Is onion array ? "+Solution14.isOnionArray(arr18));
+
+        int[] n19 = {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1};
+        System.out.println("THe decoded number is: "+Solution14.decodeArrayAnother(n19));
+
+        int n20 = 24;
+        System.out.println("Is digit increasing ? "+Solution14.isDigitIncreasing(n20));
+
+        int[] arr21 ={3, 1, 2, 3, 0} ;
+        System.out.println("Is Madhav Array ? "+Solution14.isMadhavArray(arr21));
+
+        int[] arr22 ={15} ;
+        System.out.println("Is an array centered 15 ? "+Solution14.isCentered15(arr22));
+
+        int[] arr23 ={1, 1, 0 , 1, 0,-1};
+        int n23 = 3;
+        System.out.println("Has N Values? "+Solution14.hasNValues(arr23, n23));
     }
 }
 
