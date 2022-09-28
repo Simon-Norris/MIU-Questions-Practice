@@ -47,6 +47,12 @@ public class Main
         for (int re : res) {
             System.out.print(re + " ");
         }
+
+        int num3 = 17;
+        System.out.println("\nIs given number palindrome or not ? "+Miscellaneous.isPalindrome(num3));
+
+        int num4 = 37;
+        System.out.println("\nIs given number square root or not ? "+Miscellaneous.isSquareRoot(num4));
     }
 }
 

@@ -136,4 +136,28 @@ public class Miscellaneous {
         int sec1 = (int) TimeUnit.SECONDS.convert(finished, TimeUnit.NANOSECONDS);
         System.out.println("\nSorting Finished: "+sec1);
     }
+
+    public static int isPalindrome(int n){
+        if (n <= 0) return 0;
+
+        int digit = 0, num = n;
+        while (num != 0) {
+            int rem = num % 10;
+            digit = (digit * 10) + rem;
+            num /= 10;
+        }
+
+        if (digit == n) return 1;
+        return 0;
+    }
+
+    public static int isSquareRoot(int n){
+        for (int i = 1; ; i++) {
+            if (n % i == 0){
+                if (i*i == n) return 1;
+                if (i*i > n) break;
+            }
+        }
+        return 0;
+    }
 }
