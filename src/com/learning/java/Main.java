@@ -53,6 +53,24 @@ public class Main
 
         int num4 = 37;
         System.out.println("\nIs given number square root or not ? "+Miscellaneous.isSquareRoot(num4));
+
+        int a1 = 13, b1 = 145;
+        System.out.println("Before Swapping: a = "+a1+" and b = "+b1);
+        int[] res1 = Miscellaneous.swapWithoutThirdVariable(a1, b1);
+        System.out.println("After Swapping: a = "+res1[0]+" and b = "+res1[1]);
+
+        System.out.println("Prime number from 1 to 100 are as follows");
+        for (int i = 1; i <= 100; i++) {
+            if (Miscellaneous.isPrime(i)) System.out.print(i+" ");
+        }
+
+        System.out.println();
+
+        int n69 = 6;
+        System.out.println("Using while factorial: "+Miscellaneous.recursionFactorial(n69));
+
+        int n70 = 12345;
+        System.out.println("The reverse of the given number is: "+Miscellaneous.reverseNumber(n70));
     }
 }
 

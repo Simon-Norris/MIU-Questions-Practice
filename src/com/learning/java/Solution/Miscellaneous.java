@@ -160,4 +160,47 @@ public class Miscellaneous {
         }
         return 0;
     }
+
+    public static int[] swapWithoutThirdVariable(int a1, int b1){
+        a1 = a1 + b1;
+        b1 = a1 - b1;
+        a1 = a1 - b1;
+        return new int[]{a1, b1};
+    }
+
+    public static boolean isPrime(int n){
+        if (n <= 1) return false;
+
+        for (int i = 2; i <= n/2; i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+
+    public static int whileFactorial(int n){
+        int result = 1;
+        while (n != 0) {
+            result *= n;
+            n = n-1;
+        }
+        return result;
+    }
+
+    public static int recursionFactorial(int n) {
+        if (n == 1) return 1;
+        return n * recursionFactorial(n-1);
+    }
+
+    public static int reverseNumber(int n){
+        if (n <= 0) return -1;
+
+        int result = 0;
+        while (n != 0){
+            int rem  = n % 10;
+            result = (10 * result) + rem;
+            n /= 10;
+        }
+
+        return result;
+    }
 }
