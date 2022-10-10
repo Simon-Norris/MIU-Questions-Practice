@@ -71,6 +71,21 @@ public class Main
 
         int n70 = 12345;
         System.out.println("The reverse of the given number is: "+Miscellaneous.reverseNumber(n70));
+
+        int n71= 7;
+        System.out.println("The fibonacci sequence are as follows: ");
+        Miscellaneous.fib(n71);
+        System.out.println();
+
+        int n72 = 50;
+        int n73 = 80;
+        System.out.println("The gcd between two numbers is: "+Miscellaneous.gcd(n72, n73));
+        System.out.println("Alternate The gcd between two numbers is: "+Miscellaneous.gcdAlternateWay(n72, n73));
+
+        int n74 = 1634;
+        System.out.println("Is Armstrong number ? "+Miscellaneous.isArmstrongNumber(n74));
+
+        Miscellaneous.floydTriangle(6);
     }
 }
 

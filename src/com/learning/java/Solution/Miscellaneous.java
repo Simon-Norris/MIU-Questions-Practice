@@ -203,4 +203,72 @@ public class Miscellaneous {
 
         return result;
     }
+
+    public static void fib(int n){
+        if ( n < 1) return;
+        int prev = 0, current = 1;
+        System.out.print(current+" ");
+        while(n > 1){
+            int sum = prev + current;
+            System.out.print(sum+ " ");
+            prev = current;
+            current = sum;
+            n--;
+        }
+    }
+
+    public static int gcd(int a, int b){
+        if (a == 0) return b;
+        if (b == 0) return a;
+        int res = gcd(b, a%b);
+        return res;
+    }
+
+    public static int gcdAlternateWay(int a, int b){
+        int gcd = 1;
+        for (int i = 1; i <= a && i <= b; i++) {
+            if (a % i == 0 && b % i == 0) gcd = i;
+        }
+        return gcd;
+    }
+
+    public static boolean isArmstrongNumber(int n) {
+        if (n < 0) return false;
+
+        int num = n, total = 0, count = 0;
+        while (num != 0) {
+            count++;
+            num /= 10;
+        }
+        num = n;
+        while (num != 0) {
+
+            int rem = num % 10;
+            total += pow(rem, count);
+            num /= 10;
+        }
+
+        if (total == n) return true;
+        return false;
+    }
+
+    private static int pow(int x, int y){
+        int z = 1;
+        while ( y != 0) {
+            z = x * z;
+            y--;
+        }
+        return z;
+    }
+
+    public static void floydTriangle(int n){
+        int count = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(count+" ");
+                count++;
+            }
+            System.out.println();
+        }
+    }
 }
