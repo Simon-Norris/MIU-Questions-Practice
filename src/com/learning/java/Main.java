@@ -86,6 +86,7 @@ public class Main
         System.out.println("Is Armstrong number ? "+Miscellaneous.isArmstrongNumber(n74));
 
         Miscellaneous.floydTriangle(6);
+        Miscellaneous.pascalTriangle(6);
     }
 }
 
