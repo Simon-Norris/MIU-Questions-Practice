@@ -285,4 +285,55 @@ public class Miscellaneous {
             System.out.println();
         }
     }
+
+    public static int POE(int[] a){
+        if ( a == null || a.length < 3) return -1;
+
+        int left = 0, right = a.length-1, idx = 1,leftSum = a[left], rightSum = a[right];
+
+        for (int i = 1; i < a.length - 2; i++) {
+            if (leftSum < rightSum){
+                left++;
+                leftSum += a[left];
+                idx = left + 1;
+            }
+
+            if (leftSum > rightSum){
+                right--;
+                rightSum += a[right];
+                idx = right - 1;
+            }
+        }
+        if (leftSum == rightSum) return idx;
+        return -1;
+    }
+
+    public static int[] twoSumBruteForce(int[] a, int target){
+        if (a == null || a.length <= 1) return a;
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i+1; j < a.length; j++) {
+                if (a[i] + a[j] == target) return new int[]{i,j};
+            }
+        }
+
+        return new int[]{};
+    }
+    public static int[] twoSumTwoPointer(int[] a, int target) {
+        if (a == null || a.length <= 1) return a;
+
+        insertionSort(a);
+        int left = 0, right = a.length-1;
+
+        while (left < right) {
+            if (a[left] + a[right] == target) return new int[]{left,right};
+            else if (a[left] + a[right] < target) left++;
+            else right--;
+        }
+
+        return new int[]{};
+    }
+
+
+
 }

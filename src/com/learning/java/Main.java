@@ -87,6 +87,30 @@ public class Main
 
         Miscellaneous.floydTriangle(6);
         Miscellaneous.pascalTriangle(6);
+
+        int[] n75 = {1,2,3};
+        System.out.println("The POE of given array is: "+Miscellaneous.POE(n75));
+
+        /**
+         * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+         * Input: nums = [2,7,11,15], target = 9
+         * Output: [0,1]
+         * Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+         *
+         * Input: nums = [3,2,4], target = 6
+         * Output: [1,2]
+         *
+         * Input: nums = [3,3], target = 6
+         * Output: [0,1]
+         */
+        int[] n76 = {2,7,11,15};
+        int target76 = 9;
+        int[] response76 = Miscellaneous.twoSumTwoPointer(n76, target76);
+        if (response76 == null || response76.length == 0) {
+            System.out.println("Result is null or empty");
+        } else {
+            System.out.println("The index are i="+response76[0]+" and j="+response76[1]);
+        }
     }
 }
 
