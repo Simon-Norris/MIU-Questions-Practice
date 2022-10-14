@@ -334,6 +334,25 @@ public class Miscellaneous {
         return new int[]{};
     }
 
+    public static int binarySearch(int[] a, int target){
+        if (a == null || a.length == 0) return -1;
+        int start = 0, end = a.length - 1;
+        while (start <= end) {
+            int mid = start + (end-start)/2;
+            if (a[mid] == target) return mid;
+            else if (a[mid] > target) end = mid-1;
+            else start = mid+1;
+        }
+        return -1;
+    }
 
-
+    public static int binarySearchRecursion(int[] a, int start, int end, int target){
+        if (start <= end) {
+            int mid = start +(end - start) /2;
+            if (a[mid] == target) return mid;
+            else if (a[mid] > target) return binarySearchRecursion(a, start, mid-1, target);
+            else return binarySearchRecursion(a, mid+1, end, target);
+        }
+        return -1;
+    }
 }

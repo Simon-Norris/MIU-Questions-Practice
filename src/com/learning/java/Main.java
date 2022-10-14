@@ -111,6 +111,10 @@ public class Main
         } else {
             System.out.println("The index are i="+response76[0]+" and j="+response76[1]);
         }
+        int[] n77 = { 3, 4, 5, 6, 7, 8, 9 };
+        int target77 = 9;
+        System.out.println("The index of given target in given array is "+Miscellaneous.binarySearch(n77, target77));
+        System.out.println("(using recursion) The index of given target in given array is "+Miscellaneous.binarySearchRecursion(n77, 0, n77.length -1, target77));
     }
 }
 
