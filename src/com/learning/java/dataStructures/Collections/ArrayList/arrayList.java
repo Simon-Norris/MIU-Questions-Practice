@@ -1,4 +1,4 @@
-package com.learning.java.dataStructures.Collections;
+package com.learning.java.dataStructures.Collections.ArrayList;
 
 import java.util.ArrayList;
 import java.util.List;
