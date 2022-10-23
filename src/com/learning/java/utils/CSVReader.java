@@ -11,8 +11,14 @@ public class CSVReader implements Closeable {
     private int lineCount = 0;
 
     public CSVReader(BufferedReader reader) throws IOException {
+        this(reader, true);
+    }
+
+    public CSVReader(BufferedReader reader, boolean ignoreFirstLine) throws IOException {
         this.reader = reader;
-        reader.readLine();
+        if (ignoreFirstLine) {
+            reader.readLine();
+        }
     }
 
     @Override
