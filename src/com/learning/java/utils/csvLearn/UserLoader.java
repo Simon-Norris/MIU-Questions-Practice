@@ -9,7 +9,7 @@ public class UserLoader {
     public static Vector loadUsersInVector(String pathToFile) throws IOException {
         Vector users = new Vector();
         BufferedReader lineReader = new BufferedReader(new FileReader(pathToFile));
-        try(CSVReader reader = new CSVReader(lineReader)) {
+        try(CSVReader reader = new CSVReader(lineReader, true)) {
             String[] row = null;
             while ((row = reader.readRow()) != null){
                 users.add(User.fromValues(row));

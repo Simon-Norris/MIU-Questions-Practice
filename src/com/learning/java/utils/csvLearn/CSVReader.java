@@ -7,13 +7,19 @@ import java.io.IOException;
 public class CSVReader implements Closeable {
 
     private final BufferedReader reader;
-    private final String[] headers;
+    private String[] headers;
     private int lineCount = 0;
 
-    public CSVReader(BufferedReader reader) throws IOException {
+    private CSVReader(BufferedReader reader) throws IOException {
+        this(reader, true);
+    }
+
+    public CSVReader(BufferedReader reader, boolean hasHeader) throws IOException{
         this.reader = reader;
-        String header = reader.readLine();
-        this.headers = header.split(",");
+        if (hasHeader) {
+            String header = reader.readLine();
+            this.headers = header.split(",");
+        }
     }
 
     public void close() throws IOException{

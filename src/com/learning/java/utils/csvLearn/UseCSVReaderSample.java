@@ -9,7 +9,7 @@ public class UseCSVReaderSample {
         String fileName = "src/com/learning/java/utils/sample.csv";
         FileReader fileReader = new FileReader(fileName);
         BufferedReader reader = new BufferedReader(fileReader);
-        try(CSVReader csvReader = new CSVReader(reader)) {
+        try(CSVReader csvReader = new CSVReader(reader, true)) {
             String[] row;
             while ((row = csvReader.readRow()) != null){
                 System.out.printf("%d  %s  %s\n", csvReader.getLineCount(), row[1], row[2]);
