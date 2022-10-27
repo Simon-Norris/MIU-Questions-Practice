@@ -1,4 +1,4 @@
-package com.learning.java.utils;
+package com.learning.java.utils.csvLearn;
 
 public class User {
     public int id;

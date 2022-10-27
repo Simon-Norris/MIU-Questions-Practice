@@ -1,7 +1,5 @@
 package com.learning.java.utils.csvLearn;
 
-import com.learning.java.utils.User;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
