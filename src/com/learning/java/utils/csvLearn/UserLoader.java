@@ -8,8 +8,8 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 public class UserLoader {
-    public static Vector loadUsersInVector(String pathToFile) throws IOException {
-        Vector users = new Vector();
+    public static Vector<User> loadUsersInVector(String pathToFile) throws IOException {
+        Vector<User> users = new Vector<>();
         BufferedReader lineReader = new BufferedReader(new FileReader(pathToFile));
         try(CSVReader reader = new CSVReader(lineReader, true)) {
             String[] row = null;
@@ -20,8 +20,8 @@ public class UserLoader {
         return users;
     }
 
-    public static Hashtable loadUsersInHashtableByEmail(String filePath) throws IOException {
-        Hashtable users = new Hashtable();
+    public static Hashtable<String, User> loadUsersInHashtableByEmail(String filePath) throws IOException {
+        Hashtable<String, User> users = new Hashtable<>();
         FileReader fileReader = new FileReader(filePath);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         CSVReader csvReader = new CSVReader(bufferedReader, true);
