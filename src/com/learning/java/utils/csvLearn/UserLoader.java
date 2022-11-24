@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
+import java.util.Set;
 import java.util.Vector;
 
 public class UserLoader {
@@ -31,5 +32,16 @@ public class UserLoader {
             users.put(user.email, user);
         }
         return users;
+    }
+
+    public static void loadUsersIntoSet(String filePath, Set<User> userSet) throws IOException{
+        FileReader fileReader = new FileReader(filePath);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        try(CSVReader reader = new CSVReader(bufferedReader, true)){
+            String[] row = null;
+            while ((row = reader.readRow()) != null) {
+                userSet.add(User.fromValues(row));
+            }
+        }
     }
 }
