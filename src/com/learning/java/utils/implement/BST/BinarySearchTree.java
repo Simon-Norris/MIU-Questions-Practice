@@ -3,11 +3,10 @@ package com.learning.java.utils.implement.BST;
 public class BinarySearchTree {
 
     private Node parent;
-    private int data;
     private int size = 0;
 
     BinarySearchTree(){
-        this.parent = new Node(this.data);
+        this.parent = null;
     }
 
     static class Node{
@@ -17,12 +16,14 @@ public class BinarySearchTree {
 
         public Node(int data){
             this.data = data;
+            this.right = null;
+            this.left = null;
         }
     }
 
     public void add(int data){
         if (this.size == 0) {
-            this.parent.data = data;
+            this.parent = new Node(data);
             this.size++;
         } else {
             add(parent, new Node(data));
