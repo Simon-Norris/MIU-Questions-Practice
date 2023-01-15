@@ -5,96 +5,116 @@ public class Main
 {
 
     public static void main(String[] args) {
+        int num1= 10;
+        int num2 = 11;
+        System.out.println("The sum of two binary numbers is: "+Miscellaneous.addBinary(num1, num2));
 
-        int[] a1 = {1,2,3,4,5};
-        int n1 = 2;
-        System.out.println("Before doing n based integer rounding:");
-        for (int i = 0; i < a1.length; i++) {
-            System.out.print(a1[i]+ " ");
-        }
+        int hex = 1256;
+        System.out.println("The converted hex num is: "+Miscellaneous.convertToHex(hex));
+
+        int num = 5;
+        System.out.println("The n sequence sum n+nn+nnn is: "+Miscellaneous.nSequenceSum(num));
+
+        int seconds = 7320;
+        System.out.println("The converted second int HMS is "+Miscellaneous.secondToHMS(seconds));
+
+        int[] arr = {20, 30, 40};
+        int n = 1;
+        System.out.printf("Before rotating given array %s place",n);
         System.out.println();
-        Solution14.doIntegerBasedRounding(a1, n1);
-        System.out.println("After doing n based integer rounding:");
-        for (int i = 0; i < a1.length; i++) {
-            System.out.print(a1[i]+ " ");
+        for (int j : arr) {
+            System.out.print(j +" ");
         }
+        System.out.printf("\nAfter rotating given array %s place",n);
+        Miscellaneous.rotateArray(arr, n);
+        System.out.println();
+        for (int j : arr) {
+            System.out.print(j+" ");
+        }
+
+        int[] first = {1, 3, -5, 4};
+        int[] second = {1, 4, -5, -2};
+        System.out.println("\nAfter multiplying two arrays");
+        int[] response = Miscellaneous.multiplyTwoArr(first, second);
+        for (int i = 0; i < response.length; i++) {
+            System.out.print(response[i]+" ");
+        }
+
+        int[] a = {3,4,5,6,7,8,9,10,11,12,13,14,115};
+        int[] b ={1,2,3,4,5,6,7,24,67,89,114,170};
+        System.out.println("\nAfter sorting");
+        int[] res = Miscellaneous.mergeSortedArrays(a, b);
+        for (int re : res) {
+            System.out.print(re + " ");
+        }
+
+        int num3 = 17;
+        System.out.println("\nIs given number palindrome or not ? "+Miscellaneous.isPalindrome(num3));
+
+        int num4 = 37;
+        System.out.println("\nIs given number square root or not ? "+Miscellaneous.isSquareRoot(num4));
+
+        int a1 = 13, b1 = 145;
+        System.out.println("Before Swapping: a = "+a1+" and b = "+b1);
+        int[] res1 = Miscellaneous.swapWithoutThirdVariable(a1, b1);
+        System.out.println("After Swapping: a = "+res1[0]+" and b = "+res1[1]);
+
+        System.out.println("Prime number from 1 to 100 are as follows");
+        for (int i = 1; i <= 100; i++) {
+            if (Miscellaneous.isPrime(i)) System.out.print(i+" ");
+        }
+
         System.out.println();
 
+        int n69 = 6;
+        System.out.println("Using while factorial: "+Miscellaneous.recursionFactorial(n69));
 
-        int n2= -81;
-        System.out.println("Is cube powerful ? "+Solution14.isCubePowerful(n2));
+        int n70 = 12345;
+        System.out.println("The reverse of the given number is: "+Miscellaneous.reverseNumber(n70));
 
-        int[] a2 = {1, 1};
-        System.out.println("THe decoded number from array is: "+Solution14.decodeArray(a2));
+        int n71= 7;
+        System.out.println("The fibonacci sequence are as follows: ");
+        Miscellaneous.fib(n71);
+        System.out.println();
 
-        int[] a3 = {} ;
-        System.out.println("Is array Zero plentiful ?: "+Solution14.isZeroPlentiful(a3));
+        int n72 = 50;
+        int n73 = 80;
+        System.out.println("The gcd between two numbers is: "+Miscellaneous.gcd(n72, n73));
+        System.out.println("Alternate The gcd between two numbers is: "+Miscellaneous.gcdAlternateWay(n72, n73));
 
-        int[] a4 = {2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println("Is 235Array ? "+Solution14.is235Array(a4));
+        int n74 = 1634;
+        System.out.println("Is Armstrong number ? "+Miscellaneous.isArmstrongNumber(n74));
 
-        int n5 = 4;
-        System.out.println("Is triangular ?: "+Solution14.isTriangular(n5));
+        Miscellaneous.floydTriangle(6);
+        Miscellaneous.pascalTriangle(6);
 
-        int[] a6= {2,3,3,4,4,4,4,4,3,1} ;
-        System.out.println("Is mercurial array ? "+Solution14.isMercurial(a6));
+        int[] n75 = {1,2,3};
+        System.out.println("The POE of given array is: "+Miscellaneous.POE(n75));
 
-        int n7 = 13;
-        System.out.println("Is Fibonacci Number ? "+Solution14.isFibonacci(n7));
-
-        int n8 = 125;
-        System.out.println("Is vesuvian number ? "+Solution14.isVesuvian(n8));
-
-        int[] arr9 = {1,1,4,5,4,4,1,1};
-        System.out.println("Is oneBalanced array ? "+Solution14.isOneBalanced(arr9));
-
-        int n10 = 12;
-        System.out.println("The closest fibonacci number is : " +Solution14.closestFibonacciNumber(n10));
-
-        char[] ch1 = {'b', 'o', 'g'};
-        char[] ch2 = {'b', 'o', 'm'};
-        System.out.println("Are these char arrays anagrams ? "+Solution14.areAnagrams(ch1, ch2));
-
-        int n12 = 127;
-        System.out.println("Is this number hodder ? "+Solution14.isHodder(n12));
-
-        int[] a13 = {-2, 3, 4, 9};
-        System.out.println("The largest difference between evens is: "+Solution14.largestDifferenceOfEvens(a13));
-
-        int n14 = 13;
-        System.out.println("Is prime factorial ? "+Solution14.isFactorialPrime(n14));
-
-        int[] arr15 = {1, 1, 2, 1, 2, 3};
-        System.out.println("Is this systematically increasing array ? "+ Solution14.systematicallyIncreasing(arr15));
-
-        int n16 = 563;
-        int[] res16 = Solution14.encodeArray(n16);
-        System.out.println("The encoded array is: ");
-        for (int i = 0; i < res16.length; i++) {
-            System.out.print(res16[i]+" ");
+        /**
+         * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+         * Input: nums = [2,7,11,15], target = 9
+         * Output: [0,1]
+         * Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+         *
+         * Input: nums = [3,2,4], target = 6
+         * Output: [1,2]
+         *
+         * Input: nums = [3,3], target = 6
+         * Output: [0,1]
+         */
+        int[] n76 = {2,7,11,15};
+        int target76 = 9;
+        int[] response76 = Miscellaneous.twoSumTwoPointer(n76, target76);
+        if (response76 == null || response76.length == 0) {
+            System.out.println("Result is null or empty");
+        } else {
+            System.out.println("The index are i="+response76[0]+" and j="+response76[1]);
         }
-
-        int n17 = 10;
-        System.out.println("\nIs prime happy: "+Solution14.isPrimeHappy(n17));
-
-        int[] arr18 = {-2, 5, 0, 5, 12};
-        System.out.println("Is onion array ? "+Solution14.isOnionArray(arr18));
-
-        int[] n19 = {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1};
-        System.out.println("THe decoded number is: "+Solution14.decodeArrayAnother(n19));
-
-        int n20 = 24;
-        System.out.println("Is digit increasing ? "+Solution14.isDigitIncreasing(n20));
-
-        int[] arr21 ={3, 1, 2, 3, 0} ;
-        System.out.println("Is Madhav Array ? "+Solution14.isMadhavArray(arr21));
-
-        int[] arr22 ={15} ;
-        System.out.println("Is an array centered 15 ? "+Solution14.isCentered15(arr22));
-
-        int[] arr23 ={1, 1, 0 , 1, 0,-1};
-        int n23 = 3;
-        System.out.println("Has N Values? "+Solution14.hasNValues(arr23, n23));
+        int[] n77 = { 3, 4, 5, 6, 7, 8, 9 };
+        int target77 = 9;
+        System.out.println("The index of given target in given array is "+Miscellaneous.binarySearch(n77, target77));
+        System.out.println("(using recursion) The index of given target in given array is "+Miscellaneous.binarySearchRecursion(n77, 0, n77.length -1, target77));
     }
 }
 
